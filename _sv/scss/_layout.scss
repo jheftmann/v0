@@ -1,0 +1,74 @@
+.container-fluid {
+  padding: $space-sm $space-sm $space-sm $space-lg;
+
+  @include sm {
+    padding: $space-sm $space-md $space-sm $space-xl;
+  }
+
+  @include md {
+    padding: $space-sm;
+  }
+}
+
+.col-article {
+  > p,
+  > ul {
+    @include make-md-column(8);
+    position: static;
+  }
+
+  &.col-article-offset-aside {
+    > p,
+    > ul {
+      @include make-md-column-offset(2);
+    }
+  }
+}
+
+.col-aside {
+  @include make-xs-column(12);
+  @include make-md-column(2);
+}
+
+.sidenote {
+  @include make-xs-column(12);
+  @include make-md-column(2);
+
+  @include md {
+    clear: both;
+    float: right;
+  }
+}
+
+.sidenote-group {
+  float: left;
+  height: 0;
+  overflow: visible;
+  width: 100%;
+}
+
+.sidenote,
+.col-aside--last {
+  @include md {
+    padding-left: $space-md;
+  }
+}
+
+.footer {
+  position: relative;
+  z-index: 1001;
+}
+
+.footnotes {
+  position: relative;
+  z-index: 1;
+}
+
+.faux-body {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}

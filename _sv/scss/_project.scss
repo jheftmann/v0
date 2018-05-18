@@ -1,0 +1,513 @@
+$project-default-bg-color: #f1f2f2;
+$project-gutter: 20px;
+
+.projects, .project {
+
+  p, h1, li {
+    font-size: $text-md;
+    line-height: $line-sm;
+    letter-spacing: $letter-sm;
+    margin-bottom: $space-md;
+  }
+
+  h2, .header p {
+    font-size: 30px;
+  }
+
+  p.t-sm,
+  .t-sm p {
+    font-size: $text-sm;
+    line-height: $line-sm;
+  }
+
+  .sv-feed-info-title,
+  .sv-feed-control,
+  .sv-feed-meta-title {
+    display: none;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .sv-feed {
+    padding: 0px 10px;
+  }
+
+  .project-header-tags {
+    margin-bottom: $space-md;
+    margin-top: $space-md;
+
+    @include sm {
+      margin-top: 0;
+      margin-bottom: $space-lg;
+    }
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  .project-header-tags,
+  .project-header-credits,
+  .project-status {
+    *, li, p {
+      @include secondary;
+      font-size: $text-sm;
+    }
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .project-status {
+    margin: $space-md auto $space-sm;
+
+    @include sm {
+      margin-top: 5px;
+    }
+  }
+
+  .project-header {
+
+    .project-header-inner {
+      padding: 15px 0 25px;
+
+      @include sm {
+        padding: $space-md 0 $space-lg;
+      }
+    }
+
+    .project-header-nav {
+
+      h1 {
+
+        @include sm {
+          position: fixed;
+          z-index: 100;
+        }
+      }
+    }
+
+    .project-header-body {
+      // padding-top: $space-md;
+
+      @include sm {
+        padding-top: $space-xl;
+      }
+
+      .project-header-body-description {
+        @extend .t-hyphenate;
+
+        br {
+          line-height: $text-lg * 2;
+        }
+      }
+
+      h1 {
+        font-size: $text-xl;
+      }
+    }
+  }
+
+  .sv-feed-inner {
+    padding: 0;
+
+    @include sm {
+      padding: 10px 0 0;
+    }
+  }
+
+  .sv-feed-item {
+    padding: 0 ($project-gutter / 4) 20px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    float: left;
+
+    @include sm {
+      padding: ($project-gutter / 2);
+    }
+
+    img {
+      width: 100%;
+      max-width: none;
+      margin: 0 !important;
+    }
+
+    p {
+      font-size: $text-sm;
+      line-height: $line-sm;
+      letter-spacing: $letter-sm;
+      margin-bottom: $space-md;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    video {
+      width: 100%;
+    }
+
+    &.text {
+
+
+      &.half {
+        p {
+
+          @include sm {
+            max-width: 50%;
+          }
+        }
+      }
+
+      &.textright {
+        p {
+          @include sm {
+            max-width: none;
+            padding-left: 50%;
+          }
+        }
+      }
+    }
+
+    &.full {
+      // padding: 0;
+
+      @include sm {
+
+      }
+    }
+
+    &.half {
+      width: 100%;
+
+      @include sm {
+
+      }
+    }
+
+    &.third {
+      width: 33.3%;
+      padding-bottom: 10px;
+
+      @include sm {
+
+      }
+    }
+
+    &.two-third,
+    &.twothird {
+      width: 100%;
+
+      @include sm {
+
+      }
+    }
+
+    &.quarter {
+      width: 50%;
+      padding-bottom: 10px;
+
+      @include sm {
+
+      }
+    }
+
+    &.thumb {
+      width: 33%;
+      padding-bottom: 10px;
+
+      @include sm {
+
+      }
+    }
+
+    &.cover {
+      padding-left: 0;
+      padding-right: 0;
+
+      @include sm {
+
+      }
+
+      > div {
+        margin-left: -($project-gutter / 2) !important;
+        margin-right: -($project-gutter / 2) !important;
+
+        @include sm {
+
+        }
+      }
+    }
+
+    &.cover.mp4 {
+      margin-bottom: -10px;
+
+      @include sm {
+
+      }
+    }
+
+    &.cover.ns {
+      // padding: 0;
+      // margin-top: -20px;
+      // margin-bottom: -7.5px;
+
+      @include sm {
+
+      }
+    }
+
+    &.sizer > div > div {
+      display: none;
+
+      @include sm {
+
+      }
+    }
+
+    &.clear {
+      display: none;
+      &.text {
+        display: block;
+      }
+    }
+
+    &.visiblexs {
+      display: block;
+      @include sm {
+        display: none;
+      }
+    }
+
+    &.hiddenxs {
+      display: none;
+      @include sm {
+        display: block;
+      }
+    }
+  }
+
+  @include sm {
+    .sv-feed-item {
+
+      &.half {
+        width: 50%;
+      }
+      &.third {
+        padding-bottom: 20px;
+      }
+      &.two-third,
+      &.twothird {
+        width: 66.6%;
+      }
+      &.quarter {
+        width: 25%;
+        padding-bottom: 20px;
+      }
+      &.thumb {
+        width: 16.666666667%;
+      }
+
+      &.cover {
+        padding: ($project-gutter / 2) 0;
+      }
+
+      &.cover.mp4 {
+        margin-bottom: 0;
+      }
+
+      &.cover.ns {
+        margin-top: -20px;
+        margin-bottom: -15.5px;
+      }
+
+      &.sizer > div > div {
+        display: block !important;
+      }
+
+      &.sizer.half {
+        height: calc(50vw - #{$project-gutter});
+      }
+
+      &.clear {
+        clear: both;
+        display: block;
+      }
+
+      &.sizer p {
+        bottom: ($project-gutter / 2) !important;
+        left: ($project-gutter / 2) !important;
+        position: absolute !important;
+        right: 0 !important;
+        vertical-align: bottom !important;
+        margin-bottom: 0;
+
+        br {
+          line-height: $text-md * 2;
+        }
+      }
+    }
+  }
+
+  .sv-feed-item-photo img {
+    background-color: transparent;
+  }
+
+  .sv-feed-item-text {
+    @extend .t-set;
+    padding: 100px ($project-gutter / 2);
+
+    @include sm {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    h1 {
+      font-size: $text-xl;
+      line-height: 1.1;
+
+      @include sm {
+        width: 75%;
+        font-size: $text-xxl;
+      }
+    }
+
+    h2 {
+      font-size: $text-md;
+      line-height: 1.1;
+
+      @include sm {
+        width: 60%;
+        font-size: $text-lg;
+        line-height: $line-sm;
+        margin-top: $space-md;
+      }
+    }
+
+    p {
+      font-size: $text-md;
+      line-height: $line-sm;
+      padding-left: 0;
+      padding-right: $project-gutter;
+
+      @include sm {
+        width: 50%;
+        text-indent: 0;
+      }
+
+      @include md {
+        max-width: 700px;
+      }
+    }
+
+    blockquote {
+      font-size: $text-xl;
+      text-indent: -($text-xl / 2);
+      line-height: 1.1;
+      margin: 0;
+
+      @include sm {
+        width: 75%;
+        font-size: $text-xxl;
+        text-indent: -($text-xxl / 2);
+      }
+    }
+  }
+}
+
+/* INFOBLOCK */
+.infoblock {
+  width: 100vw;
+
+
+  &.cover {
+    padding: 0 0 20px;
+
+    @include sm {
+      padding: 0;
+    }
+  }
+
+  &.ns {
+    margin: -20px 0;
+  }
+
+  .sv-feed-item-markdown {
+    background-color: black;
+    color: white;
+    padding: 0;
+    display: inline-block;
+    // width: 100%;
+
+    .cover {
+      padding: 0;
+    }
+  }
+
+  p:first-of-type {
+    width: 100%;
+    padding-right: 10px;
+
+    @include sm {
+      width: 33.3%;
+      padding-right: 25px;
+    }
+  }
+
+  p:last-of-type {
+    width: 100%;
+    display: block;
+    width: 100%;
+    display: flex;
+
+    @include sm {
+      width: 66.6%;
+    }
+  }
+
+  p {
+    padding: 20px;
+    float: none;
+    margin-bottom: 0px;
+    max-width: none;
+
+    @include sm {
+      padding: 20px;
+      float: left;
+    }
+  }
+
+  p img {
+    align-self: center;
+    padding-bottom: 5px;
+    width: 50% !important;
+
+    @include sm {
+      padding-bottom: 0;
+    }
+  }
+
+  p img:first-of-type {
+    padding-right: 5px;
+
+    @include sm {
+      padding-right: 10px;
+    }
+  }
+
+  p img:last-of-type {
+    padding-left: 5px;
+
+    @include sm {
+      padding-left: 10px;
+    }
+  }
+}

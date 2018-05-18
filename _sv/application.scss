@@ -73,19 +73,19 @@ $shadow-default: 10px 10px 20px 10px rgba(0, 0, 0, 0.2) !important;
 @import "_lib/bootstrap/utilities";
 @import "_lib/bootstrap/responsive-utilities";
 
-@import '_scss/mixins';
-@import '_scss/cursors';
-@import '_scss/type';
-@import '_scss/modals';
-@import '_scss/masks';
-@import '_scss/layout';
-@import '_scss/logo';
-@import '_scss/form';
-@import '_scss/indicators';
-@import '_scss/spritefix';
-@import '_scss/grid';
-@import '_scss/project';
-@import '_scss/blog';
+@import 'scss/mixins';
+@import 'scss/cursors';
+@import 'scss/type';
+@import 'scss/modals';
+@import 'scss/masks';
+@import 'scss/layout';
+@import 'scss/logo';
+@import 'scss/form';
+@import 'scss/indicators';
+@import 'scss/spritefix';
+@import 'scss/grid';
+@import 'scss/project';
+@import 'scss/blog';
 
 body {
   color: $color-base;
