@@ -141,16 +141,12 @@ $nav-height:                             $space-xl;
 @import 'scss/mixins';
 @import 'scss/cursors';
 @import 'scss/type';
+@import 'scss/media';
 @import 'scss/layout';
 
 body {
-  color: $color-base;
-  font-size: $text-sm;
-  line-height: $line-md;
-  @include regular;
   @include cursor-circle-lg-black-fill;
   position: relative;
-  -webkit-font-smoothing: antialiased;
 
   .touch & {
     cursor: pointer;

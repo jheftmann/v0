@@ -31,9 +31,11 @@
 }
 
 body {
-  @include regular;
   color: $color-base;
-  font-size: $text-xxs;
+  font-size: $text-sm;
+  line-height: $line-md;
+  -webkit-font-smoothing: antialiased;
+  @include regular;
 
   em {
     @include regular;
@@ -43,6 +45,8 @@ body {
     @include regular;
   }
 }
+
+// Defaults
 
 h1,
 h2,
@@ -81,56 +85,9 @@ a {
   }
 }
 
-/*doc
----
-title: Typeset
-name: 8-typeset
-category: Type
----
-
-Reading text that has been set.
-
-```html_example
-<div class="t-set">
-  <h1>Heading One</h1>
-
-  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h2>Heading Two</h2>
-
-  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h3>Heading Three</h3>
-
-  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h4>Heading Four</h4>
-
-  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h5>Heading Five</h5>
-
-  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h6>Heading Six</h6>
-
-  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <ul>
-    <li>Lorem ipsum dolor sit amet</li>
-    <li>Consectetur adipiscing elit</li>
-    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-  </ul>
-
-  <hr>
-
-  <ol>
-    <li>Lorem ipsum dolor sit amet</li>
-    <li>Consectetur adipiscing elit</li>
-    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-  </ol>
-</div>
-```
+/*
+T-SET
+`.t-set`
 */
 
 h1 {
@@ -334,47 +291,8 @@ hr {
 }
 
 /*
-```html_example
-<div class="t-set t-reading">
-  <h1>Heading One</h1>
-
-  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h2>Heading Two</h2>
-
-  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h3>Heading Three</h3>
-
-  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h4>Heading Four</h4>
-
-  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h5>Heading Five</h5>
-
-  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <h6>Heading Six</h6>
-
-  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-  <ul>
-    <li>Lorem ipsum dolor sit amet</li>
-    <li>Consectetur adipiscing elit</li>
-    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-  </ul>
-
-  <hr>
-
-  <ol>
-    <li>Lorem ipsum dolor sit amet</li>
-    <li>Consectetur adipiscing elit</li>
-    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-  </ol>
-</div>
-```
+T-SET + T-READING
+`.t-set.t-reading`
 */
 
 .t-reading {

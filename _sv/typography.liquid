@@ -1,17 +1,31 @@
-{% include 'nav' %}
 <div class="layout">
 
-  <h1>Type</h1>
-  {% include 'type_sample' %}
-  <hr>
-  <div class="t-set">
-    <h1>T-Set</h1>
-    {% include 'type_sample' %}
-  </div>
-  <hr>
-  <div class="t-set t-reading">
-    <h1>T-Reading</h1>
-    {% include 'type_sample' %}
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-4" style="border-right: 1px solid black;">
+        <h1>Type</h1>
+        {% include 'type_sample' %}
+        <hr>
+      </div>
+
+      <div class="col-sm-4" style="border-right: 1px solid black;">
+        <div class="t-set">
+          <h1>Type</h1>
+          {% include 'type_sample' %}
+        </div>
+        <hr>
+      </div>
+
+      <div class="col-sm-4" style="border-right: 1px solid black;">
+        <div class="t-set t-reading">
+          <h1>Type</h1>
+          {% include 'type_sample' %}
+        </div>
+        <hr>
+      </div>
+
+    </div>
   </div>
 
 </div>
