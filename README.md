@@ -6,8 +6,8 @@ Start a new site quickly and easily.
 2. Run `sv watch`
 3. Compiles to `/build`
 
-[] Update bootstrap
-[] CSS grid and flexbox helpers
-[] Typography updates
-[] Variables updates
-[] Helpers
++ [ ] Update bootstrap
++ [ ] CSS grid and flexbox helpers
++ [ ] Typography updates
++ [ ] Variables updates
++ [ ] Helpers
