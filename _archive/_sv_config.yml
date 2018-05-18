@@ -1,0 +1,9 @@
+---
+source: _sv
+destination: ''
+source_stylesheet: application.scss
+source_javascript: application.js
+destination_stylesheet: _sv_custom.css
+destination_javascript: _sv_custom.js
+layout: _sv/templates/_layout.liquid
+includes: _includes

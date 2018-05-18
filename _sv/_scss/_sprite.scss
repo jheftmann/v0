@@ -1,0 +1,85 @@
+//@import 'rails-sass-images';
+/*
+
+        Creating a sprite from following images:
+
+        _sv/_sprite/arrow-E-lg.png (80x59)
+        _sv/_sprite/arrow-E-md.png (40x29)
+        _sv/_sprite/arrow-E-sm.png (20x16)
+        _sv/_sprite/arrow-N-lg.png (58x80)
+        _sv/_sprite/arrow-N-md.png (30x40)
+        _sv/_sprite/arrow-N-sm.png (16x20)
+        _sv/_sprite/arrow-NE-lg.png (61x61)
+        _sv/_sprite/arrow-NE-md.png (32x32)
+        _sv/_sprite/arrow-NE-sm.png (16x16)
+        _sv/_sprite/arrow-NW-lg.png (62x62)
+        _sv/_sprite/arrow-NW-md.png (32x32)
+        _sv/_sprite/arrow-NW-sm.png (16x16)
+        _sv/_sprite/arrow-S-lg.png (58x80)
+        _sv/_sprite/arrow-S-md.png (30x40)
+        _sv/_sprite/arrow-S-sm.png (16x20)
+        _sv/_sprite/arrow-SE-lg.png (62x62)
+        _sv/_sprite/arrow-SE-md.png (32x32)
+        _sv/_sprite/arrow-SE-sm.png (16x16)
+        _sv/_sprite/arrow-SW-lg.png (62x62)
+        _sv/_sprite/arrow-SW-md.png (32x32)
+        _sv/_sprite/arrow-SW-sm.png (16x16)
+        _sv/_sprite/arrow-W-lg.png (80x58)
+        _sv/_sprite/arrow-W-md.png (40x30)
+        _sv/_sprite/arrow-W-sm.png (20x16)
+        _sv/_sprite/crossarrow-lg.png (86x88)
+        _sv/_sprite/crossarrow-md.png (50x52)
+        _sv/_sprite/crossarrow-sm.png (40x40)
+        _sv/_sprite/cursor-black.png (30x30)
+        _sv/_sprite/cursor-stroke-black.png (30x30)
+        _sv/_sprite/cursor-yellow.png (30x30)
+        _sv/_sprite/gradient-white.png (100x167)
+        _sv/_sprite/logo-black.png (99x29)
+        _sv/_sprite/x-black-md.png (32x32)
+        _sv/_sprite/x-black-sm.png (20x20)
+        _sv/_sprite/x–black-lg.png (58x58)
+
+        Output files:
+          _sv/_sv_sprite.png
+          _sv/_sprite.scss
+
+        Output size:
+          140x2903
+
+
+*/
+.sprite-arrow-E-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (30px/-2) (20px/-2); height: (59px/2) + 1px; width: (80px/2) + 1px;}
+.sprite-arrow-E-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (50px/-2) (119px/-2); height: (29px/2) + 1px; width: (40px/2) + 1px;}
+.sprite-arrow-E-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (60px/-2) (188px/-2); height: (16px/2) + 1px; width: (20px/2) + 1px;}
+.sprite-arrow-N-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (41px/-2) (244px/-2); height: (80px/2) + 1px; width: (58px/2) + 1px;}
+.sprite-arrow-N-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (55px/-2) (364px/-2); height: (40px/2) + 1px; width: (30px/2) + 1px;}
+.sprite-arrow-N-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (62px/-2) (444px/-2); height: (20px/2) + 1px; width: (16px/2) + 1px;}
+.sprite-arrow-NE-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (39px/-2) (504px/-2); height: (61px/2) + 1px; width: (61px/2) + 1px;}
+.sprite-arrow-NE-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (54px/-2) (605px/-2); height: (32px/2) + 1px; width: (32px/2) + 1px;}
+.sprite-arrow-NE-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (62px/-2) (677px/-2); height: (16px/2) + 1px; width: (16px/2) + 1px;}
+.sprite-arrow-NW-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (39px/-2) (733px/-2); height: (62px/2) + 1px; width: (62px/2) + 1px;}
+.sprite-arrow-NW-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (54px/-2) (835px/-2); height: (32px/2) + 1px; width: (32px/2) + 1px;}
+.sprite-arrow-NW-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (62px/-2) (907px/-2); height: (16px/2) + 1px; width: (16px/2) + 1px;}
+.sprite-arrow-S-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (41px/-2) (963px/-2); height: (80px/2) + 1px; width: (58px/2) + 1px;}
+.sprite-arrow-S-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (55px/-2) (1083px/-2); height: (40px/2) + 1px; width: (30px/2) + 1px;}
+.sprite-arrow-S-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (62px/-2) (1163px/-2); height: (20px/2) + 1px; width: (16px/2) + 1px;}
+.sprite-arrow-SE-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (39px/-2) (1223px/-2); height: (62px/2) + 1px; width: (62px/2) + 1px;}
+.sprite-arrow-SE-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (54px/-2) (1325px/-2); height: (32px/2) + 1px; width: (32px/2) + 1px;}
+.sprite-arrow-SE-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (62px/-2) (1397px/-2); height: (16px/2) + 1px; width: (16px/2) + 1px;}
+.sprite-arrow-SW-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (39px/-2) (1453px/-2); height: (62px/2) + 1px; width: (62px/2) + 1px;}
+.sprite-arrow-SW-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (54px/-2) (1555px/-2); height: (32px/2) + 1px; width: (32px/2) + 1px;}
+.sprite-arrow-SW-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (62px/-2) (1627px/-2); height: (16px/2) + 1px; width: (16px/2) + 1px;}
+.sprite-arrow-W-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (30px/-2) (1683px/-2); height: (58px/2) + 1px; width: (80px/2) + 1px;}
+.sprite-arrow-W-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (50px/-2) (1781px/-2); height: (30px/2) + 1px; width: (40px/2) + 1px;}
+.sprite-arrow-W-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (60px/-2) (1851px/-2); height: (16px/2) + 1px; width: (20px/2) + 1px;}
+.sprite-crossarrow-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (27px/-2) (1907px/-2); height: (88px/2) + 1px; width: (86px/2) + 1px;}
+.sprite-crossarrow-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (45px/-2) (2035px/-2); height: (52px/2) + 1px; width: (50px/2) + 1px;}
+.sprite-crossarrow-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (50px/-2) (2127px/-2); height: (40px/2) + 1px; width: (40px/2) + 1px;}
+.sprite-cursor-black { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (55px/-2) (2207px/-2); height: (30px/2) + 1px; width: (30px/2) + 1px;}
+.sprite-cursor-stroke-black { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (55px/-2) (2277px/-2); height: (30px/2) + 1px; width: (30px/2) + 1px;}
+.sprite-cursor-yellow { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (55px/-2) (2347px/-2); height: (30px/2) + 1px; width: (30px/2) + 1px;}
+.sprite-gradient-white { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (20px/-2) (2417px/-2); height: (167px/2) + 1px; width: (100px/2) + 1px;}
+.sprite-logo-black { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (20px/-2) (2624px/-2); height: (29px/2) + 1px; width: (99px/2) + 1px;}
+.sprite-x-black-md { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (54px/-2) (2693px/-2); height: (32px/2) + 1px; width: (32px/2) + 1px;}
+.sprite-x-black-sm { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (60px/-2) (2765px/-2); height: (20px/2) + 1px; width: (20px/2) + 1px;}
+.sprite-xblack-lg { background-image: url('_sv_sprite.png'); background-size: (image-width('_sv_sprite.png')/2) auto; background-repeat: no-repeat; background-position: (41px/-2) (2825px/-2); height: (58px/2) + 1px; width: (58px/2) + 1px;}

@@ -1,0 +1,19 @@
+.mask {
+  height: 150px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1000; //$mask-layer
+
+  @include md {
+    height: 200px;
+  }
+
+  &.mask-white {
+    background: transparent url("_assets/images/mask-white.png") repeat-x center center;
+  }
+
+  &.mask-bottom {
+    bottom: 0;
+  }
+}

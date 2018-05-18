@@ -1,0 +1,66 @@
+<style>
+
+  body {
+    padding: 50px !important;
+  }
+
+  .modal,
+  .modal-dialog {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    float: left;
+  }
+
+  .modal {
+    margin: 50px 0 0 50px !important;
+    display: block !important;
+  }
+</style>
+
+  <h1 style="position: relative;">Modules</h1>
+
+  {% include 'modules/client_list' %}
+  {% include 'modules/project_index' %}
+  {% include 'modules/contact' %}
+  {% include 'modules/info' %}
+
+
+  <div class="modal" id="newsletter" tabindex="-1" role="dialog" aria-labelledby="Modal">
+    <div class="modal-dialog modal-lg modal-yellow" role="document">
+      <div class="modal-content">
+        <div class="modal-body t-set">
+          {% include 'newsletter' %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1 style="position: relative;">Work</h1>
+
+  {% include 'work/okreal_web' %}
+  {% include 'work/aida_web' %}
+  {% include 'work/baggu_web' %}
+  {% include 'work/storq_web' %}
+  {% include 'work/kidtech_web' %}
+  {% include 'work/dropbox_web' %}
+  {% include 'work/fleuriste_web' %}
+  {% include 'work/storq_brand' %}
+  {% include 'work/ayr_mobile_1' %}
+  {% include 'work/okreal_bizcards' %}
+
+  {% include 'work/span_rotator' %}
+  {% include 'work/span_web_home' %}
+  {% include 'work/baggu_detail' %}
+  {% include 'work/baggu_web_grid' %}
+  {% include 'work/kidtech_brand' %}
+  {% include 'work/antfood_web_home' %}
+  {% include 'work/antfood_web_grid' %}
+  {% include 'work/xxxi_studio' %}
+  {% include 'work/xxxi_postcards' %}
+
+  {% include 'grid' %}
+
+
+  <div style="clear:both;"></div>

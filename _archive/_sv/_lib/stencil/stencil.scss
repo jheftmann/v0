@@ -1,0 +1,759 @@
+/*doc
+ ---
+ title: Overview
+ name: 0-mixins-overview
+ category: Media Queries
+ ---
+
+Set break points which are used in break point mixins, text and the Bootstrap grid and visibility helpers.
+
+| Variable          | Default
+| ---               | ---
+| `$screen-xxs-min` | 375px
+| `$screen-xs-min`  | 480px
+| `$screen-sm-min`  | 768px
+| `$screen-md-min`  | 1024px
+| `$screen-lg-min`  | 1280px
+| `$screen-x-minl`  | 1500px
+| `$screen-xxl-min` | 1800px
+
+**Width**
+
+You should implement a mobile first approach so you use `from` over `to` when possible.
+
++ `@from($device-width)`
++ `@to($device-width)`
+
+The following shorthand mixins have been created for your convenience.
+
+| Mixin | Description
+| ---    | ---
+| `@include xs {}` | Extra small screen size and up
+| `@include sm {}` | Small screen size and up
+| `@include md {}` | Medium screen size and up
+| `@include lg {}` | Large screen size and up
+| `@include xl {}` | Extra large screen size and up
+
+
+**Height**
+
++ `@from-height($device-height)`
++ `@to-height($device-height)`
+*/
+
+$screen-xxs-min:                         375px !default;
+$screen-xs-min:                          480px !default;
+$screen-sm-min:                          768px !default;
+$screen-md-min:                          1024px !default;
+$screen-lg-min:                          1300px !default;
+$screen-xl-min:                          1500px !default;
+$screen-xxl-min:                         1800px !default;
+
+@mixin from($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content;
+  }
+}
+
+@mixin to($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content;
+  }
+}
+
+@mixin from-height($device-height) {
+  @media screen and (min-height: $device-height) {
+    @content;
+  }
+}
+
+@mixin to-height($device-height) {
+  @media screen and (max-height: $device-height - 1) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @include from($screen-xs-min) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @include from($screen-sm-min) {
+    @content;
+  }
+}
+
+@mixin md {
+  @include from($screen-md-min) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @include from($screen-lg-min) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @include from($screen-xl-min) {
+    @content;
+  }
+}
+
+/*doc
+ ---
+ title: Type
+ name: 0-t-overview
+ category: Type
+ ---
+
+All type helpers are prefixed by `t-`.
+
+
+Type is responsive and the break-point is `sm`.
+
+*/
+
+/*doc
+---
+title: Text Sizes
+name: 1-text-sizes
+category: Type
+---
+
+| Variable            | Default
+| ---                 | ---
+| `$text-xxs`         | 11px
+| `$text-xs`          | 13px
+| `$text-sm`          | 18px
+| `$text-md`          | 25px
+| `$text-lg`          | 40px
+| `$text-xl`          | 60px
+| `$text-xxl`         | 100px
+
+| Variable            | Default
+| ---                 | ---
+| `$sm-text-xxs`      | 11px
+| `$sm-text-xs`       | 13px
+| `$sm-text-sm`       | 18px
+| `$sm-text-md`       | 25px
+| `$sm-text-lg`       | 40px
+| `$sm-text-xl`       | 60px
+| `$sm-text-xxl`      | 100px
+*/
+
+$text-xxs:                               11px !default;
+$text-xs:                                13px !default;
+$text-sm:                                18px !default;
+$text-md:                                25px !default;
+$text-lg:                                40px !default;
+$text-xl:                                60px !default;
+$text-xxl:                               100px !default;
+
+$sm-text-xxs:                            $text-xxs !default;
+$sm-text-xs:                             $text-xs !default;
+$sm-text-sm:                             $text-sm !default;
+$sm-text-md:                             $text-md !default;
+$sm-text-lg:                             $text-lg !default;
+$sm-text-xl:                             $text-xl !default;
+$sm-text-xxl:                            $text-xxl !default;
+
+/*doc
+---
+title: Line Height
+name: 2-line-heights
+category: Type
+---
+
+| Variable                 | Default
+| ---                      | ---
+| `$text-line-xxs`         | 1.9
+| `$text-line-xs`          | 1.9
+| `$text-line-sm`          | 1.5
+| `$text-line-md`          | 1.5
+| `$text-line-lg`          | 1.2
+| `$text-line-xl`          | 1.0
+| `$text-line-xxl`         | 1.0
+
+| Variable            | Default
+| ---                 | ---
+| `$sm-text-line-xxs`      | 1.9
+| `$sm-text-line-xs`       | 1.9
+| `$sm-text-line-sm`       | 1.5
+| `$sm-text-line-md`       | 1.5
+| `$sm-text-line-lg`       | 1.5
+| `$sm-text-line-xl`       | 1.2
+| `$sm-text-line-xxl`      | 1.0
+*/
+
+
+$text-line-xxs:                          1.8 !default;
+$text-line-xs:                           1.9 !default;
+$text-line-sm:                           1.9 !default;
+$text-line-md:                           1.5 !default;
+$text-line-lg:                           1.5 !default;
+$text-line-xl:                           1.2 !default;
+$text-line-xxl:                          1.0 !default;
+
+$sm-text-line-xxs:                       $text-line-xxs !default;
+$sm-text-line-xs:                        $text-line-xs !default;
+$sm-text-line-sm:                        $text-line-sm !default;
+$sm-text-line-md:                        $text-line-md !default;
+$sm-text-line-lg:                        $text-line-lg !default;
+$sm-text-line-xl:                        $text-line-xl !default;
+$sm-text-line-xxl:                       $text-line-xxl !default;
+
+/*doc
+---
+title: Spacing
+name: 3-spacing
+category: Type
+---
+
+| Variable    | Default
+| ---         | ---
+| `$space-xs` | 10px
+| `$space-sm` | 15px
+| `$space-md` | 30px
+| `$space-lg` | 60px
+| `$space-xl` | 100px
+*/
+
+$space-xs:                               10px !default;
+$space-sm:                               15px !default;
+$space-md:                               30px !default;
+$space-lg:                               60px !default;
+$space-xl:                               100px !default;
+$space-xxl:                              160px !default;
+
+
+/*doc
+---
+title: Size
+name: 4-t-sizes
+category: Type
+---
+
+The type is responsive and a combination of type size and line-height.
+
+Each mixin relates to the correcsponding size variable.
+
+e.g. `@include t-xxs`.
+*/
+
+@mixin t-size($size, $sm-size, $important) {
+  font-size: $size #{$important};
+
+  @include sm {
+    font-size: $sm-size #{$important};
+  }
+}
+
+@mixin t-line($height, $sm-height, $important) {
+  line-height: $height #{$important};
+
+  @include sm {
+    line-height: $sm-height #{$important};
+  }
+}
+
+@mixin t-xxs($important: "") {
+  @include t-size($text-xxs, $sm-text-xxs, $important);
+  @include t-line($text-line-xxs, $sm-text-line-xxs, $important);
+}
+
+@mixin t-xs($important: "") {
+  @include t-size($text-xs, $sm-text-xs, $important);
+  @include t-line($text-line-xs, $sm-text-line-xs, $important);
+}
+
+@mixin t-sm($important: "") {
+  @include t-size($text-sm, $sm-text-sm, $important);
+  @include t-line($text-line-sm, $sm-text-line-sm, $important);
+}
+
+@mixin t-md($important: "") {
+  @include t-size($text-md, $sm-text-md, $important);
+  @include t-line($text-line-md, $sm-text-line-md, $important);
+}
+
+@mixin t-lg($important: "") {
+  @include t-size($text-lg, $sm-text-lg, $important);
+  @include t-line($text-line-lg, $sm-text-line-lg, $important);
+}
+
+@mixin t-xl($important: "") {
+  @include t-size($text-xl, $sm-text-xl, $important);
+  @include t-line($text-line-xl, $sm-text-line-xl, $important);
+}
+
+@mixin t-xxl($important: "") {
+  @include t-size($text-xxl, $sm-text-xxl, $important);
+  @include t-line($text-line-xxl, $sm-text-line-xxl, $important);
+}
+
+/*doc
+---
+title: Body
+name: 5-body-type
+category: Type
+---
+```html_example
+<div>
+  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing <b>elit</b>, sed do eiusmod tempor <em>incididunt</em> ut <i>labore</i> et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a href="#">est laborum</a>.
+</div>
+```
+*/
+
+body {
+  font-size: $text-xxs;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:visited,
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+/*doc
+---
+title: Typeset
+name: 6-typeset
+category: Type
+---
+
+Type that has been set.
+
+```html_example
+<div class="t-set">
+  <h1>Heading One</h1>
+
+  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h2>Heading Two</h2>
+
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h3>Heading Three</h3>
+
+  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h4>Heading Four</h4>
+
+  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h5>Heading Five</h5>
+
+  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h6>Heading Six</h6>
+
+  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ul>
+
+  <hr>
+
+  <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ol>
+</div>
+```
+*/
+h1 {
+  .t-set &,
+  &.t-set {
+    @include t-lg;
+  }
+}
+
+h2 {
+  .t-set &,
+  &.t-set {
+    @include t-md;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  .t-set &,
+  &.t-set {
+    @include t-sm;
+  }
+}
+
+p,
+li {
+  .t-set &,
+  &.t-set {
+    @include t-xs;
+  }
+}
+
+small {
+  font-size: 80%;
+}
+
+ol,
+ul {
+  .t-set &,
+  &.t-set {
+    padding-left: $space-md;
+  }
+}
+
+ol {
+  .t-set &,
+  &.t-set {
+    list-style: decimal;
+  }
+}
+
+ul {
+  .t-set &,
+  &.t-set {
+    list-style: disc;
+  }
+}
+
+a {
+  .t-set &,
+  &.t-set {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  background-color: transparent;
+  width: 100%;
+
+  &.t-set {
+    margin: $space-md 0;
+  }
+}
+
+
+img {
+  .t-set &,
+  &.t-set {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: $space-md;
+    width: 100%;
+  }
+}
+
+.t-set {
+  h1,
+  h2 {
+    margin-bottom: $space-md;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul {
+    margin-bottom: $space-sm;
+  }
+
+  * {
+    &.t-xxs {
+      @include t-xxs(!important);
+    }
+
+    &.t-xs {
+      @include t-xs(!important);
+    }
+
+    &.t-sm {
+      @include t-sm(!important);
+    }
+
+    &.t-md {
+      @include t-md(!important);
+    }
+
+    &.t-lg {
+      @include t-lg(!important);
+    }
+
+    &.t-xl {
+      @include t-xl(!important);
+    }
+
+    &.t-xxl {
+      @include t-xxl(!important);
+    }
+  }
+}
+
+/*
+/*doc
+---
+title: Reading
+name: 7-reading
+category: Type
+---
+
+Type that has been set as reading text (more space).
+
+```html_example
+<div class="t-set t-reading">
+  <h1>Heading One</h1>
+
+  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h2>Heading Two</h2>
+
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h3>Heading Three</h3>
+
+  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h4>Heading Four</h4>
+
+  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h5>Heading Five</h5>
+
+  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h6>Heading Six</h6>
+
+  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ul>
+
+  <hr>
+
+  <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ol>
+</div>
+```
+*/
+
+.t-reading {
+  h1 {
+    margin-bottom: $space-lg;
+  }
+
+  h2 {
+    margin-top: $space-lg;
+  }
+
+  h3 {
+    margin-top: $space-lg;
+  }
+
+  h4 {
+    margin-top: $space-md;
+  }
+
+  h5 {
+    margin-top: $space-md;
+  }
+
+  h6 {
+    margin-top: $space-md;
+  }
+
+  hr {
+    margin: $space-lg 0;
+  }
+}
+
+/*doc
+---
+title: Type Styles
+name: type
+category: Extras
+---
+
+[Sass](https://gist.github.com/micdijkstra/8b368965d39c71ccadcba94acc4b2444)
+
+*/
+
+
+/*doc
+---
+title: Nav
+name: nav
+category: Extras
+---
+
+Navigation Menu which is presented as an overlay on mobile and then in the header on small screens and up.
+
+[HTML](https://gist.github.com/micdijkstra/64c47e8e0fa6d30a6b1471f811890342)
+[Sass](https://gist.github.com/micdijkstra/c264f64b4abaf36305a1315097eff143)
+
+*/
+
+
+/*doc
+---
+title: Loader
+name: loader
+category: Extras
+---
+
+The `preload` class shows the loader and prevents animations and transitions from occuring.
+
+The `loader` class is a full screen takeover.
+
+[HTML](https://gist.github.com/micdijkstra/9b50e29df7aae3a5bb93db276b6579fa)
+[Sass](https://gist.github.com/micdijkstra/dced2b8da7a23cd9780c9fb8f5fb644d)
+*/
+
+/*doc
+---
+title: Footer
+name: footer
+category: Extras
+---
+
+Footer which sticks to the bottom of the page.
+
+[HTML](https://gist.github.com/micdijkstra/01e3bf7b690c982af7dbb14d3856da0d)
+[Sass](https://gist.github.com/micdijkstra/ae47d1fb7e60c806bd661255b73be8d2)
+
+*/
+
+/*doc
+---
+title: Overlay
+name: overlay
+category: Extras
+---
+
+The `overlay` class creates a fixed element that takes over the screen. It uses Bootstrap collapse to hide/show.
+
+[HTML](https://gist.github.com/micdijkstra/fee39ba536ce78f4411b8ececca41763)
+[Sass](https://gist.github.com/micdijkstra/c6662a9b82efdca761e705e82564c693)
+*/
+
+/*doc
+---
+title: Layout
+name: layout
+category: Helpers
+---
+
+```
+.clear {
+clear: both;
+}
+```
+```
+<div class="clear"></div>
+```
+*/
+
+.clear {
+  clear: both;
+}
+
+/*doc
+---
+title: Type
+name: type
+category: Helpers
+---
+
+`.t-hyphenate`
+
+`.t-un-hyphenate`
+
+*/
+
+.t-hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.t-un-hyphenate {
+  overflow-wrap: normal;
+  word-wrap: normal;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+}
+
+/*doc
+---
+title: Appearance
+name: appearance
+category: Helpers
+---
+
+Documentation here
+
+*/
+
+// styles here
+
+
+/*doc
+---
+title: Transitions and Effects
+name: transitions and effects
+category: Helpers
+---
+
+Documentation here
+
+*/
+
+// styles here

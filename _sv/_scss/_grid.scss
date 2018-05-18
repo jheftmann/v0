@@ -1,0 +1,44 @@
+$grid-background-color: $color-gray;
+$grid-stroke-color: black;
+$grid-stroke-weight: 1px;
+$grid-outer-padding: 50px;
+
+
+.xxix-grid {
+  padding: $grid-outer-padding;
+  background: $grid-background-color;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-collapse: collapse;
+  border-width: $grid-stroke-weight;
+  border-color: $grid-stroke-color;
+  border-style: solid;
+  color: $grid-stroke-color;
+  table-layout:fixed;
+}
+
+table td, table th {
+  border-width: $grid-stroke-weight;
+  border-color: $grid-stroke-color;
+  border-style: solid;
+  padding: 3px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  width: 1px;
+ white-space: nowrap;
+}
+
+td.xxix-grid-0 {
+  border: none;
+}

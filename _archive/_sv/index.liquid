@@ -1,0 +1,40 @@
+<h1>hindex</h1>
+
+{% assign info = menu.last %}
+
+{% for menu in content.menus %}
+  {% assign menuinfo = menu.last %}
+
+    <hr>
+    {{ menuinfo.menu }}
+
+  {% endfor %}
+
+<p>{{ content.info | markdownify }}</p>
+
+<hr>
+asdf
+
+  <div class="wrapper wrapper-padded">
+
+    {{ _includes.nav }}
+
+    <nav>
+      {% include 'nav' %}
+    </nav>
+
+    <hr>
+
+    {% for menu in content.menus %}
+    {% assign menuinfo = menu.last %}
+
+      <hr>
+      {{ menuinfo.menu }}
+
+    {% endfor %}
+
+    <hr>
+
+    {{ content.info }}
+
+  </div>

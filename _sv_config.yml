@@ -1,0 +1,10 @@
+---
+deploy: '../../Dropbox/smallvictori.es-staging/xxix/'
+source: _sv
+destination: 'build'
+source_stylesheet: application.scss
+source_javascript: application.js
+destination_stylesheet: _sv_custom.css
+destination_javascript: _sv_custom.js
+layout: templates/_layout.liquid
+includes: templates
