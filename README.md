@@ -1,4 +1,4 @@
-#v0
+# v0
 Start a new site quickly and easily.
 
 ## Getting started
