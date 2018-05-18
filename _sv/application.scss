@@ -1,65 +1,128 @@
-/* v0
- *
- * Include vendor and third party scripts
- *
- *= require _lib/bootstrap/_normalize
- *= require_self
- */
-// Space
-$space-xs:                               10px !default;
-$space-sm:                               15px !default;
-$space-md:                               25px !default;
-$space-lg:                               50px !default;
-$space-xl:                               100px !default;
+//
+$base-unit:                              10px;
+
+$screen-xxs-min:                         375px !default;
+$screen-xs-min:                          480px !default;
+$screen-sm-min:                          768px !default;
+$screen-md-min:                          1024px !default;
+$screen-lg-min:                          1300px !default;
+$screen-xl-min:                          1500px !default;
+$screen-xxl-min:                         1800px !default;
 
 // Grid
 $grid-columns:                           12 !default;
 $grid-gutter-width:                      25px !default;
 
-// Text sizes
-$text-xxs:                               10px;
-$text-xs:                                12px;
-$text-sm:                                15px;
-$text-md:                                20px;
-// $text-lg:                                30px;
-$text-lg:                                25px;
-$text-xl:                                50px;
-// $text-xxl:                               80px;
-$text-xxl:                               100px;
+//
+// $font-primary
 
-$border-md: 3px;
+//
+$text-base:                              25px !default;
+$text-xxs:                               12px !default;
+$text-xs:                                15px !default;
+$text-sm:                                20px !default;
+$text-md:                                $text-base !default;
+$text-lg:                                50px !default;
+$text-xl:                                75px !default;
+$text-xxl:                               100px !default;
 
-// Functional colors
+//
+// $sm-text-base:
+$sm-text-xxs:                            $text-xxs !default;
+$sm-text-xs:                             $text-xs !default;
+$sm-text-sm:                             $text-sm !default;
+$sm-text-md:                             $text-md !default;
+$sm-text-lg:                             $text-lg !default;
+$sm-text-xl:                             $text-xl !default;
+$sm-text-xxl:                            $text-xxl !default;
+
+//
+$text-v-base:                            2vw;
+$text-v-xxs:                             2vw;
+$text-v-xs:                              2vw;
+$text-v-sm:                              2vw;
+$text-v-md:                              $text-v-base;
+$text-v-lg:                              2vw;
+$text-v-xl:                              2vw;
+$text-v-xxl:                             2vw;
+
+//
+$text-line-base:                         1.0;
+$text-line-xxs:                          1.8 !default;
+$text-line-xs:                           1.9 !default;
+$text-line-sm:                           1.9 !default;
+$text-line-md:                           1.5 !default;
+$text-line-lg:                           1.5 !default;
+$text-line-xl:                           1.2 !default;
+$text-line-xxl:                          1.0 !default;
+
+$line-base:                              $text-line-base;
+$line-xxs:                               $text-line-xxs;
+$line-xs:                                $text-line-xs;
+$line-sm:                                $text-line-sm;
+$line-md:                                $text-line-md;
+$line-lg:                                $text-line-lg;
+$line-xl:                                $text-line-xl;
+$line-xxl:                               $text-line-xxl;
+
+//
+$sm-text-line-xxs:                       $text-line-xxs !default;
+$sm-text-line-xs:                        $text-line-xs !default;
+$sm-text-line-sm:                        $text-line-sm !default;
+$sm-text-line-md:                        $text-line-md !default;
+$sm-text-line-lg:                        $text-line-lg !default;
+$sm-text-line-xl:                        $text-line-xl !default;
+$sm-text-line-xxl:                       $text-line-xxl !default;
+
+//
+$text-letter-base:                       0;
+$text-letter-xs:                         0;
+$text-letter-sm:                         0;
+$text-letter-md:                         $text-letter-base;
+$text-letter-lg:                         0;
+$text-letter-xl:                         0;
+
+//
+$space-base:                             25px;
+$space-xs:                               10px !default;
+$space-sm:                               $space-base !default;
+$space-md:                               50px !default;
+$space-lg:                               75px !default;
+$space-xl:                               100px !default;
+$space-xxl:                              200px !default;
+
+//
 $color-base:                             black;
 $color-brand:                            #ffeb0b;
+// $color-brand-secondary:                  ;
 $color-gray:                             #e3e7e1;
 $color-blue:                             #0000cc;
-$color-dark:                             #231F20;
+$color-dark:                             black;
+$color-light:                            white;
+$color-disabled:                         $color-gray;
 
-// Variables
-$content-layer: 0;
-$mask-layer: 1000;
-$modal-width-lg: 730px;
-$modal-width-md: 450px;
-$modal-width-sm: 300px;
-$modal-width-xs: 250px;
+//
+$border-base:                            2px solid $color-base;
+$border-sm:                              1px solid $color-base;
+$border-md:                              $border-base;
+$border-lg:                              5px solid $color-base;
 
-// Shadow
-$shadow-default: 10px 10px 20px 10px rgba(0, 0, 0, 0.2) !important;
+// imports
+@import '_lib/stencil/stencil';
 
-// Arrows
-// N: &#8593;
-// NE: &#8599;
-// E: &#8594;
-// SE: &#8600;
-// S: &#8595;
-// SW: &#8601;
-// W: &#8592;
-// NW: &#8598;
+// project variables
+$gutter:                                 $space-base;
+$layout-outer:                           $gutter * 2;
+
+// $nav-height-sm:
+$nav-height:                             $space-xl;
+
+
+///
 
 @import '_lib/stencil/stencil';
-@include loader;
-@include overlay;
+// @include loader;
+// @include overlay;
 
 @import "_lib/bootstrap/variables";
 @import "_lib/bootstrap/mixins";
@@ -73,19 +136,12 @@ $shadow-default: 10px 10px 20px 10px rgba(0, 0, 0, 0.2) !important;
 @import "_lib/bootstrap/utilities";
 @import "_lib/bootstrap/responsive-utilities";
 
+@import 'scss/fonts';
+@import 'scss/loader';
 @import 'scss/mixins';
 @import 'scss/cursors';
 @import 'scss/type';
-@import 'scss/modals';
-@import 'scss/masks';
 @import 'scss/layout';
-@import 'scss/logo';
-@import 'scss/form';
-@import 'scss/indicators';
-@import 'scss/spritefix';
-@import 'scss/grid';
-@import 'scss/project';
-@import 'scss/blog';
 
 body {
   color: $color-base;
@@ -95,19 +151,6 @@ body {
   @include cursor-circle-lg-black-fill;
   position: relative;
   -webkit-font-smoothing: antialiased;
-
-  .loader {
-    background-color: white;
-  }
-
-  &.preload {
-    .loader {
-      opacity: 1;
-      pointer-events: auto;
-      visibility: visible;
-      z-index: 9999;
-    }
-  }
 
   .touch & {
     cursor: pointer;
@@ -141,150 +184,6 @@ body {
   overflow: hidden;
 }
 
-.container,
-.container-fluid {
-  padding: 0 15px;
-}
-
 .sv-badge {
   display: none;
-}
-
-// global
-.index {
-
-  .nav {
-    padding-top: 10px;
-
-    .current-page {
-      @include cursor-circle-lg-black-outline;
-
-      a {
-        pointer-events: none;
-      }
-    }
-  }
-}
-
-// backgrounds
-//
-// .page-background-wrap {
-//   width: 100%;
-//   height: 100%;
-//   min-width: 100%;
-//   min-height: 100%;
-//   position: absolute;
-//   z-index: 0;
-// }
-//
-// .page-background-pattern {
-//   $width: calc(100% - 50px);
-//   $height: calc(100% - 50px);
-//   width: $width;
-//   height: $height;
-//   min-width: $width;
-//   min-height: $height;
-//   position: absolute;
-//   z-index: 0;
-// }
-//
-// .page-background-wrap {
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   padding: 50px;
-// }
-
-.bg-gray {
-  background-color: $color-gray;
-}
-
-.bg-dark {
-  background-color: $color-dark;
-}
-
-// nav
-.nav,
-.footer {
- width: 100%;
- position: relative;
- z-index: 1002;
-
-  .nav-inner {
-   padding: 15px 0;
-  }
-
-  p,
-  h1 {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  a {
-
-    &:hover {
-
-    }
-  }
-}
-
-body.preload {
-  * {
-    display: none !important;
-    transition: none !important;
-    animation-name: none !important;
-  }
-
-  .loader {
-    display: block !important;
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes pulsate {
-  0%   { opacity: 1 }
-  50% { opacity: 0.3 }
-  100% { opacity: 1 }
-}
-
-.loader {
-  background-color: white;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: all 0.5s ease-in-out 0.25s;
-  visibility: hidden;
-  z-index: 999999999;
-}
-
-.loader-loading {
-  background-color: black;
-  animation: pulsate 1.5s infinite ease-in-out;
-  border-radius: 30px;
-  height: 30px;
-  left: 50%;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: absolute;
-  top: 50%;
-  width: 30px;
-}
-
-.has-shadow,
-.hasshadow iframe,
-.hasshadow video,
-.hasshadow img {
-  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2) !important;
-}
-
-.no-shadow,
-.noshadow iframe,
-.noshadow video,
-.noshadow img {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0) !important;
 }

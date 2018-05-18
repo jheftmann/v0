@@ -13,7 +13,7 @@
 
 !function($) {
 
-  $('.js-hypher p').hyphenate('en-us');
+  $('.js-hyphenate, .js-hyphenate p').hyphenate('en-us');
 
   // All Projects module
   $.each(data, function (key, value) {
@@ -82,6 +82,9 @@
 
 $(window).load(function(){
   console.log('window loaded!');
+  pageLoaded = true;
+  $("body").scrollTop(0);
+  $("body").removeClass("preload");
 });
 
 $(window).resize(function(){
