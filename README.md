@@ -7,7 +7,7 @@ Start a new site quickly and easily.
 3. Compiles to `/build`
 
 ## To do
-+ [ ] Update bootstrap
++ [x] Update bootstrap
 + [ ] CSS grid and flexbox helpers
 + [ ] Typography updates
 + [ ] Variables updates

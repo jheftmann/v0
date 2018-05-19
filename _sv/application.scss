@@ -14,6 +14,24 @@ $screen-xxl-min:                         1800px !default;
 // grid
 $grid-columns:                           12 !default;
 $grid-gutter-width:                      25px !default;
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
 
 // fonts
 $font-primary:                           "'America Regular Web', 'Helvetica Neue', Helvetica, Arial, sans-serif";
@@ -62,19 +80,6 @@ $text-line-md:                           1.25 !default;
 $text-line-lg:                           1.5 !default;
 $text-line-xl:                           2.0 !default;
 
-// $line-xs:                                $text-line-xs;
-// $line-sm:                                $text-line-sm;
-// $line-md:                                $text-line-md;
-// $line-lg:                                $text-line-lg;
-// $line-xl:                                $text-line-xl;
-//
-// //
-// $sm-text-line-xs:                        $text-line-xs !default;
-// $sm-text-line-sm:                        $text-line-sm !default;
-// $sm-text-line-md:                        $text-line-md !default;
-// $sm-text-line-lg:                        $text-line-lg !default;
-// $sm-text-line-xl:                        $text-line-xl !default;
-
 // letterspacing
 $text-letter-base:                       0;
 $text-letter-xs:                         -.01em;
@@ -96,21 +101,19 @@ $space-xxl:                              200px !default;
 // color
 $color-base:                             black;
 $color-brand:                            #ffeb0b;
-// $color-brand-secondary:                  ;
+$color-brand-secondary:                  green;
 $color-gray:                             #e3e7e1;
-$color-blue:                             #0000cc;
 $color-dark:                             black;
+$collr-mid:                              gray;
 $color-light:                            white;
 $color-disabled:                         $color-gray;
+$color-alert:                            red;
 
 //
 $border-base:                            1px solid $color-base;
 $border-sm:                              $border-base;
 $border-md:                              2px solid $color-base;
 $border-lg:                              5px solid $color-base;
-
-// imports
-@import '_lib/stencil/stencil';
 
 /*
 // project variables
@@ -128,17 +131,18 @@ $nav-height:                             $space-xl;
 // @include loader;
 // @include overlay;
 
-@import "_lib/bootstrap/variables";
-@import "_lib/bootstrap/mixins";
-@import "_lib/bootstrap/scaffolding";
-@import "_lib/bootstrap/buttons";
-@import "_lib/bootstrap/dropdowns";
-@import "_lib/bootstrap/grid";
-@import "_lib/bootstrap/forms";
-@import "_lib/bootstrap/media";
-@import "_lib/bootstrap/modals";
-@import "_lib/bootstrap/utilities";
-@import "_lib/bootstrap/responsive-utilities";
+// @import "_lib/bootstrap/variables";
+// @import "_lib/bootstrap/mixins";
+// @import "_lib/bootstrap/scaffolding";
+// @import "_lib/bootstrap/buttons";
+// @import "_lib/bootstrap/dropdowns";
+// @import "_lib/bootstrap/grid";
+// @import "_lib/bootstrap/forms";
+// @import "_lib/bootstrap/media";
+// @import "_lib/bootstrap/modals";
+// @import "_lib/bootstrap/utilities";
+// @import "_lib/bootstrap/responsive-utilities";
+@import "_lib/bootstrap/bootstrap";
 
 @import 'scss/fonts';
 @import 'scss/loader';
@@ -147,9 +151,9 @@ $nav-height:                             $space-xl;
 @import 'scss/type';
 @import 'scss/media';
 @import 'scss/layout';
+@import 'scss/nav';
 
 body {
-  @include cursor-circle-lg-black-fill;
   position: relative;
 
   .touch & {

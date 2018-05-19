@@ -42,7 +42,7 @@ body {
   font-size: $text-base;
   line-height: $text-line-base;
   -webkit-font-smoothing: antialiased;
-  @include tertiary-italic;
+  @include primary;
 
   em {
     @include primary-italic;
@@ -161,8 +161,14 @@ T-SET
 `.t-set`
 */ ////////////////////////////////////////////////
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   &.t-set {
+    @include primary;
     margin-bottom: 0;
   }
 }
