@@ -12,3 +12,4 @@ Start a new site quickly and easily.
 + [ ] Typography updates
 + [ ] Variables updates
 + [ ] Helpers
++ [ ] Variables as classes e.g. `$letter-sm` > `.letter-sm {}`

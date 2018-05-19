@@ -1,4 +1,6 @@
-//
+/*
+// global variables
+*/
 $base-unit:                              10px;
 
 $screen-xxs-min:                         375px !default;
@@ -9,34 +11,40 @@ $screen-lg-min:                          1300px !default;
 $screen-xl-min:                          1500px !default;
 $screen-xxl-min:                         1800px !default;
 
-// Grid
+// grid
 $grid-columns:                           12 !default;
 $grid-gutter-width:                      25px !default;
 
-//
-// $font-primary
+// fonts
+$font-primary:                           "'America Regular Web', 'Helvetica Neue', Helvetica, Arial, sans-serif";
+$font-primary-italic:                    "'America Regular Italic Web', 'Helvetica Neue', Helvetica, Arial, sans-serif";
+$font-primary-heavy:                     $font-primary-italic;
+$font-secondary:                         "'Super Display Light Web', 'Times New Roman'";
+$font-secondary-heavy:                   "'Super Display Super Web', 'Times New Roman'";
+$font-tertiary:                          "'America Mono Regular Web', Courier";
+$font-tertiary-italic:                   "'America Mono Regular Italic Web', Courier";
 
-//
-$text-base:                              25px !default;
+// type sizes
+$text-base:                              20px !default;
 $text-xxs:                               12px !default;
 $text-xs:                                15px !default;
-$text-sm:                                20px !default;
-$text-md:                                $text-base !default;
+$text-sm:                                $text-base !default;
+$text-md:                                25px !default;
 $text-lg:                                50px !default;
 $text-xl:                                75px !default;
 $text-xxl:                               100px !default;
 
 //
 // $sm-text-base:
-$sm-text-xxs:                            $text-xxs !default;
-$sm-text-xs:                             $text-xs !default;
-$sm-text-sm:                             $text-sm !default;
-$sm-text-md:                             $text-md !default;
-$sm-text-lg:                             $text-lg !default;
-$sm-text-xl:                             $text-xl !default;
-$sm-text-xxl:                            $text-xxl !default;
+// $sm-text-xxs:                            $text-xxs !default;
+// $sm-text-xs:                             $text-xs !default;
+// $sm-text-sm:                             $text-sm !default;
+// $sm-text-md:                             $text-md !default;
+// $sm-text-lg:                             $text-lg !default;
+// $sm-text-xl:                             $text-xl !default;
+// $sm-text-xxl:                            $text-xxl !default;
 
-//
+// variable type sizes
 $text-v-base:                            2vw;
 $text-v-xxs:                             2vw;
 $text-v-xs:                              2vw;
@@ -46,44 +54,38 @@ $text-v-lg:                              2vw;
 $text-v-xl:                              2vw;
 $text-v-xxl:                             2vw;
 
-//
+// line height
 $text-line-base:                         1.0;
-$text-line-xxs:                          1.8 !default;
-$text-line-xs:                           1.9 !default;
-$text-line-sm:                           1.9 !default;
-$text-line-md:                           1.5 !default;
+$text-line-xs:                           0.9 !default;
+$text-line-sm:                           $text-line-base !default;
+$text-line-md:                           1.25 !default;
 $text-line-lg:                           1.5 !default;
-$text-line-xl:                           1.2 !default;
-$text-line-xxl:                          1.0 !default;
+$text-line-xl:                           2.0 !default;
 
-$line-base:                              $text-line-base;
-$line-xxs:                               $text-line-xxs;
-$line-xs:                                $text-line-xs;
-$line-sm:                                $text-line-sm;
-$line-md:                                $text-line-md;
-$line-lg:                                $text-line-lg;
-$line-xl:                                $text-line-xl;
-$line-xxl:                               $text-line-xxl;
-
+// $line-xs:                                $text-line-xs;
+// $line-sm:                                $text-line-sm;
+// $line-md:                                $text-line-md;
+// $line-lg:                                $text-line-lg;
+// $line-xl:                                $text-line-xl;
 //
-$sm-text-line-xxs:                       $text-line-xxs !default;
-$sm-text-line-xs:                        $text-line-xs !default;
-$sm-text-line-sm:                        $text-line-sm !default;
-$sm-text-line-md:                        $text-line-md !default;
-$sm-text-line-lg:                        $text-line-lg !default;
-$sm-text-line-xl:                        $text-line-xl !default;
-$sm-text-line-xxl:                       $text-line-xxl !default;
+// //
+// $sm-text-line-xs:                        $text-line-xs !default;
+// $sm-text-line-sm:                        $text-line-sm !default;
+// $sm-text-line-md:                        $text-line-md !default;
+// $sm-text-line-lg:                        $text-line-lg !default;
+// $sm-text-line-xl:                        $text-line-xl !default;
 
-//
+// letterspacing
 $text-letter-base:                       0;
-$text-letter-xs:                         0;
-$text-letter-sm:                         0;
-$text-letter-md:                         $text-letter-base;
-$text-letter-lg:                         0;
-$text-letter-xl:                         0;
+$text-letter-xs:                         -.01em;
+$text-letter-sm:                         $text-letter-base;
+$text-letter-md:                         .03em;
+$text-letter-lg:                         .05em;
+$text-letter-xl:                         .1em;
 
-//
+// spacing
 $space-base:                             25px;
+$space-xxs:                              5px;
 $space-xs:                               10px !default;
 $space-sm:                               $space-base !default;
 $space-md:                               50px !default;
@@ -91,7 +93,7 @@ $space-lg:                               75px !default;
 $space-xl:                               100px !default;
 $space-xxl:                              200px !default;
 
-//
+// color
 $color-base:                             black;
 $color-brand:                            #ffeb0b;
 // $color-brand-secondary:                  ;
@@ -102,15 +104,17 @@ $color-light:                            white;
 $color-disabled:                         $color-gray;
 
 //
-$border-base:                            2px solid $color-base;
-$border-sm:                              1px solid $color-base;
-$border-md:                              $border-base;
+$border-base:                            1px solid $color-base;
+$border-sm:                              $border-base;
+$border-md:                              2px solid $color-base;
 $border-lg:                              5px solid $color-base;
 
 // imports
 @import '_lib/stencil/stencil';
 
+/*
 // project variables
+*/
 $gutter:                                 $space-base;
 $layout-outer:                           $gutter * 2;
 

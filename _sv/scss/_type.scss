@@ -1,77 +1,111 @@
-@font-face {
-  font-family: "Replica-Regular-Prod";
-  src:url("_assets/fonts/GT-America-Mono-Regular.eot");
-  src:url("_assets/fonts/GT-America-Mono-Regular.eot?#iefix") format("embedded-opentype"),
-      url("_assets/fonts/GT-America-Mono-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// Type
 
-// Fonts
-@mixin regular {
-  font-family: "Replica-Regular-Prod", "Replica-Regular", 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: $letter-sm;
+//
+@mixin primary {
+  font-family: $font-primary;
 }
+.font-primary {@include primary;}
 
-@mixin bold {
-  @include regular;
+//
+@mixin primary-italic {
+  font-family: $font-primary-italic;
 }
+.font-primary-italic {@include primary-italic;}
 
-@mixin light {
-  @include regular;
-}
-
+//
 @mixin secondary {
-  font-family: 'Times New Roman', Times, serif;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: $letter-sm;
+  font-family: $font-secondary;
 }
+.font-secondary {@include secondary;}
 
+//
+@mixin secondary-heavy {
+  font-family: $font-secondary-heavy;
+}
+.font-secondary-heavy {@include secondary-heavy;}
+
+//
+@mixin tertiary {
+  font-family: $font-tertiary;
+}
+.font-tertiary {@include tertiary;}
+
+//
+@mixin tertiary-italic {
+  font-family: $font-tertiary-italic;
+}
+.font-tertiary-italic {@include tertiary-italic;}
+
+//
 body {
   color: $color-base;
-  font-size: $text-sm;
-  line-height: $line-md;
+  font-size: $text-base;
+  line-height: $text-line-base;
   -webkit-font-smoothing: antialiased;
-  @include regular;
+  @include tertiary-italic;
 
   em {
-    @include regular;
+    @include primary-italic;
   }
 
   b, strong {
-    @include regular;
+    @include secondary-heavy;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
+  }
+
+  * {
+    font-weight: normal;
+    font-style: normal;
   }
 }
 
 // Defaults
-
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-li {
-  font-weight: normal;
-  letter-spacing: $letter-sm;
-  line-height: 1.0;
+h6, {
+  @include secondary;
+  letter-spacing: $text-letter-base;
+  line-height: $text-line-base;
+  font-size: $text-lg;
+  color: $color-base;
   margin: 0;
   padding: 0;
   text-transform: none;
 }
 
-ul {
+p,
+li {
+  @include primary;
+  letter-spacing: $text-letter-md;
+  line-height: $text-line-md;
+  font-size: $text-sm;
+  color: $color-base;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  li {
+    list-style-position: inside;
+  }
 }
 
 a {
-  @include cursor-circle-lg-yellow-fill;
   color: inherit;
   text-decoration: none;
 
@@ -85,50 +119,93 @@ a {
   }
 }
 
-/*
+blockquote {
+  @include primary-italic;
+  padding: 0;
+  margin: 0;
+}
+
+code,
+pre {
+  @include tertiary;
+  color: $color-base;
+}
+
+pre {
+  background: $color-gray;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+hr {
+  background: transparent;
+  border-top: $border-base;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  * {
+    @include tertiary;
+    text-align: left;
+  }
+
+  tr {
+    height: $space-md;
+  }
+}
+
+/* ////////////////////////////////////////////////
 T-SET
 `.t-set`
-*/
+*/ ////////////////////////////////////////////////
+
+h1, h2, h3, h4, h5, h6 {
+  &.t-set {
+    margin-bottom: 0;
+  }
+}
 
 h1 {
   &.t-set {
     font-size: $text-xxl;
-    line-height: $line-sm;
+    line-height: $text-line-sm;
   }
 }
 
 h2 {
   &.t-set {
     font-size: $text-xl;
-    line-height: $line-sm;
+    line-height: $text-line-sm;
   }
 }
 
 h3 {
   &.t-set {
     font-size: $text-lg;
-    line-height: $line-sm;
+    line-height: $text-line-sm;
   }
 }
 
 h4 {
   &.t-set {
     font-size: $text-md;
-    line-height: $line-sm;
+    line-height: $text-line-sm;
   }
 }
 
 h5 {
   &.t-set {
     font-size: $text-sm;
-    line-height: $line-sm;
+    line-height: $text-line-sm;
   }
 }
 
 h6 {
   &.t-set {
     font-size: $text-xxs;
-    line-height: $line-sm;
+    line-height: $text-line-sm;
   }
 }
 
@@ -136,38 +213,16 @@ p,
 li {
   &.t-set {
     @extend .t-hyphenate;
-    font-size: $text-md;
-    letter-spacing: .01em;
-    line-height: $line-sm;
-    text-indent: $text-sm * 2;
-    text-align: justify;
-
-    @include sm {
-      font-size: $text-lg;
-      text-indent: $text-lg * 2;
-    }
-
-    @include md {
-      font-size: 45px;
-      text-indent: 45px * 2;
-    }
-
-    @include xl {
-      font-size: 60px;
-      text-indent: 60px * 2;
-    }
+    font-size: $text-sm;
+    letter-spacing: $text-letter-md;
+    line-height: $text-line-md;
 
     @include from(2000px) {
-      font-size: 80px;
-      text-indent: 80px * 2;
+      font-size: 100px;
     }
 
     > a {
-      @include secondary;
-      @include cursor-circle-lg-yellow-fill;
-      font-size: 110%;
-      letter-spacing: 0;
-      padding-bottom: 3px;
+      border-bottom: 1px solid $color-base;
 
       &:active,
       &:target {
@@ -188,8 +243,10 @@ li {
   }
 }
 
-small {
-  font-size: 80%;
+ol, ul {
+  &.t-set {
+    margin-bottom: 0;
+  }
 }
 
 ol {
@@ -210,56 +267,32 @@ a {
   }
 }
 
-hr {
-  background-color: transparent;
-  border-color: $color-base;
-  border-width: $border-md;
+blockquote {
+  &.t-set {
+    @include secondary-heavy;
+    font-size: $text-md;
+    padding: $space-md;
+  }
+}
 
+hr {
   &.t-set {
     margin: $space-md 0;
+    background: transparent;
+    border-top: $border-md;
   }
 }
 
 .t-set {
-  h1 {
-    @extend h1.t-set;
-    margin-bottom: $space-sm;
-  }
-
-  h2 {
-    @extend h2.t-set;
-    margin-bottom: $space-sm;
-  }
-
-  h3 {
-    @extend h3.t-set;
-    margin-bottom: $space-sm;
-  }
-
-  h4 {
-    @extend h4.t-set;
-    margin-bottom: $space-sm;
-  }
-
-  h5 {
-    @extend h5.t-set;
-    margin-bottom: $space-sm;
-  }
-
-  h6 {
-    @extend h6.t-set;
-    margin-bottom: $space-sm;
-  }
-
-  p, li {
-    @extend p.t-set;
-    // line-height: $line-md;
-  }
 
   img {
     margin: $space-md 0;
     max-width: 100%;
     width: 100%;
+  }
+
+  small {
+    font-size: 80%;
   }
 
   sup {
@@ -273,205 +306,124 @@ hr {
     }
   }
 
-  ol {
-    @extend ol.t-set;
+  table {
+    margin: $space-md 0;
+
+    thead {
+      border-top: $border-sm;
+      border-bottom: $border-sm;
+    }
+
+    tbody {
+      border-bottom: $border-sm;
+    }
+
+    tr {
+      height: $space-md;
+      border-bottom: $border-sm;
+    }
+
+    th, td {
+      border-right: $border-sm;
+      padding: $space-xs;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
   }
 
-  ul {
-    @extend ul.t-set;
-  }
-
-  a {
-    @extend a.t-set;
-  }
-
-  hr {
-    @extend hr.t-set;
-  }
+  h1 {@extend h1.t-set;}
+  h2 {@extend h2.t-set;}
+  h3 {@extend h3.t-set;}
+  h4 {@extend h4.t-set;}
+  h5 {@extend h5.t-set;}
+  h6 {@extend h6.t-set;}
+  p, li {@extend p.t-set;}
+  ol {@extend ol.t-set;}
+  ul {@extend ul.t-set;}
+  a {@extend a.t-set;}
+  blockquote {@extend blockquote.t-set;}
+  hr {@extend hr.t-set;}
 }
 
-/*
+/* ////////////////////////////////////////////////
 T-SET + T-READING
 `.t-set.t-reading`
-*/
+*/ ////////////////////////////////////////////////
 
 .t-reading {
   h1 {
-    margin-top: $space-lg;
+    margin-top: 0;
   }
 
   h2 {
-    margin-top: $space-lg;
+    margin-top: 0;
   }
 
   h3 {
-    margin-top: $space-lg;
+    margin-top: 0;
   }
 
   h4 {
-    margin-top: $space-md;
+    margin-top: 0;
   }
 
   h5 {
-    margin-top: $space-md;
+    margin-top: 0;
   }
 
   h6 {
-    margin-top: $space-md;
+    margin-top: 0;
   }
 
   p {
-    // text-indent: 0;
+    margin-bottom: $space-sm;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   ul,
   ol {
-    &.t-set {
-      padding-left: $space-md;
-    }
-  }
-
-  ul {
-    li {
-      list-style-type: none;
-    }
-  }
-
-  a {
-    // border-bottom: 1px solid $color-dark;
-  }
-}
-
-.t-super-size {
-  @include light;
-  font-size: $text-xl;
-  line-height: 1.0;
-  letter-spacing: 0;
-  text-transform: uppercase;
-
-  a {
-    display: block;
-    font-size: $text-xs;
-    line-height: $line-sm;
-    vertical-align: middle;
-    text-transform: none;
-    text-decoration: none;
-  }
-
-  @include md {
-    font-size: $text-xxl - 10px;
-
-    a {
-      font-size: $text-sm;
-      line-height: $line-md;
-    }
-  }
-
-  @include lg {
-    font-size: $text-xxl;
-  }
-}
-
-.sidenotes {
-  p {
-    @extend .t-hyphenate;
-    font-size: $text-xs;
-    text-indent: $text-xs * 2;
-    text-align: left;
-  }
-
-}
-
-.sidenote {
-  margin-top: $space-sm;
-}
-
-.footnotes,
-.sidenote {
-  > ol {
-    padding: 0 $space-sm;
-    list-style-position: inside;
-
-    @include sm {
-      list-style-position: outside;
-    }
-
-    @include md {
-      padding: 0;
-    }
-  }
-
-  li,
-  p {
-    @include secondary;
-    font-size: $text-sm;
-    line-height: $line-sm;
     margin-bottom: $space-sm;
-    text-align: left;
-    text-indent: 0;
-    padding-bottom: 0;
+  }
 
-    @include md {
-      font-size: $text-xs;
-    }
+  a {
+    text-transform: uppercase;
+  }
 
-    a {
-      @include cursor-circle-sm-yellow-fill;
-      border-bottom: 1px solid black;
-      padding-bottom: 0;
-      font-size: $text-sm;
+  blockquote {
+    font-size: $text-lg;
 
-      @include md {
-        font-size: $text-xs;
-      }
-
-      &:hover {
-        border-color: white;
-      }
-    }
   }
 }
 
-.ref-mark {
-  appearance: none;
-  display: inline-block;
-  padding-left: $space-sm;
-  font-size: 11px;
-}
-
-.reversefootnote {
-  @include md {
-    display: none;
-  }
-}
-
+// typographic helpers
 .t-disabled {
-  color: $color-gray;
+  color: $color-disabled;
 
   a {
     pointer-events: none;
-    @include cursor-circle-lg-gray-fill;
+    cursor: not-allowed;
   }
 }
 
-.t-indented-0 {
+.t-indented {
+  text-indent: $text-md;
+
+  p,
+  p & {
+    text-indent: $text-md;
+  }
+}
+
+.t-indented-none {
   text-indent: 0;
-}
 
-p.live-icon {
-  padding-bottom: 10px;
-  font-size: 11px;
-  text-transform: uppercase;
-}
-
-.outbound-link {
-  span {
-    display: none;
-  }
-
-  &:hover {
-    span {
-      display: inline-block;
-    }
+  p,
+  p & {
+    text-indent: 0;
   }
 }

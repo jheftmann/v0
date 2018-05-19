@@ -28,13 +28,13 @@ Set break points which are used in break point mixins, utilities, text and the B
 | `$screen-xxl-min` | 1800px
 */
 
-$screen-xxs-min:                         375px !default;
-$screen-xs-min:                          480px !default;
-$screen-sm-min:                          768px !default;
-$screen-md-min:                          1024px !default;
-$screen-lg-min:                          1300px !default;
-$screen-xl-min:                          1500px !default;
-$screen-xxl-min:                         1800px !default;
+// $screen-xxs-min:                         375px !default;
+// $screen-xs-min:                          480px !default;
+// $screen-sm-min:                          768px !default;
+// $screen-md-min:                          1024px !default;
+// $screen-lg-min:                          1300px !default;
+// $screen-xl-min:                          1500px !default;
+// $screen-xxl-min:                         1800px !default;
 
 /*doc
 ---
@@ -54,15 +54,15 @@ category: Variables
 | `$text-xl`      | 60px
 | `$text-xxl`     | 100px
 */
-
-$text-default:                           9px !default;
-$text-xxs:                               11px !default;
-$text-xs:                                13px !default;
-$text-sm:                                18px !default;
-$text-md:                                25px !default;
-$text-lg:                                40px !default;
-$text-xl:                                60px !default;
-$text-xxl:                               100px !default;
+//
+// $text-default:                           9px !default;
+// $text-xxs:                               11px !default;
+// $text-xs:                                13px !default;
+// $text-sm:                                18px !default;
+// $text-md:                                25px !default;
+// $text-lg:                                40px !default;
+// $text-xl:                                60px !default;
+// $text-xxl:                               100px !default;
 
 /*doc
 ---
@@ -78,9 +78,9 @@ category: Variables
 | `$letter-lg` | 0.3em
 */
 
-$letter-sm:                              0.05em !default;
-$letter-md:                              0.1em !default;
-$letter-lg:                              0.3em !default;
+// $letter-sm:                              0.05em !default;
+// $letter-md:                              0.1em !default;
+// $letter-lg:                              0.3em !default;
 
 /*doc
 ---
@@ -98,11 +98,11 @@ category: Variables
 | `$line-xl` | 2.0
 */
 
-$line-xs:                                1.0 !default;
-$line-sm:                                1.25 !default;
-$line-md:                                1.5 !default;
-$line-lg:                                1.75 !default;
-$line-xl:                                2.0 !default;
+// $line-xs:                                1.0 !default;
+// $line-sm:                                1.25 !default;
+// $line-md:                                1.5 !default;
+// $line-lg:                                1.75 !default;
+// $line-xl:                                2.0 !default;
 
 /*doc
 ---
@@ -120,11 +120,11 @@ category: Variables
 | `$space-xl` | 100px
 */
 
-$space-xs:                               10px !default;
-$space-sm:                               15px !default;
-$space-md:                               30px !default;
-$space-lg:                               60px !default;
-$space-xl:                               100px !default;
+// $space-xs:                               10px !default;
+// $space-sm:                               15px !default;
+// $space-md:                               30px !default;
+// $space-lg:                               60px !default;
+// $space-xl:                               100px !default;
 
 
 
@@ -147,14 +147,14 @@ category: Mixins
 ---
 
 **Width**
-  
+
 You should implement a mobile first approach so you use `from` over `to`.
-  
+
 + `@from($device-width)`
 + `@to($device-width)`
-  
+
 The following shorthand mixins have been created for your convenience.
-  
+
 | Mixin | Description
 | ---    | ---
 | `@include xs {}` | Extra small screen size and up
@@ -162,11 +162,11 @@ The following shorthand mixins have been created for your convenience.
 | `@include md {}` | Medium screen size and up
 | `@include lg {}` | Large screen size and up
 | `@include xl {}` | Extra large screen size and up
-  
+
 The value for these break-points is set in [variables][screen-sizes].
 
 **Height**
-  
+
 + `@from-height($device-height)`
 + `@to-height($device-height)`
 */
@@ -233,7 +233,7 @@ category: Mixins
 ---
 
 Cover background image.
- 
+
 `@include background-image('image.png')`
 */
 
@@ -450,6 +450,12 @@ category: Utilities
   .u#{$namespace}-inline-block {
     display: inline-block !important;
   }
+  .u#{$namespace}-flex {
+    display: flex !important;
+  }
+  .u#{$namespace}-inline-flex {
+    display: inline-flex !important;
+  }
   .u#{$namespace}-relative {
     position: relative !important;
   }
@@ -498,10 +504,10 @@ The value for these break-points is set in [variables][spacing].
 
 If verbosity is not your thing you can use the shorthand version (in brackets).
 
-Classes are constructed as: `u-{{breakpoint}}-{{type}}-{{direction}}-{{size}}`  
+Classes are constructed as: `u-{{breakpoint}}-{{type}}-{{direction}}-{{size}}`
 e.g. `u-margin-all-lg` or `u-sm-padding-vertical-sm`.
 
-Shorthand classes are constructed as `u-{{breakpoint}}-{{type}}{{direction}}{{size}}`  
+Shorthand classes are constructed as `u-{{breakpoint}}-{{type}}{{direction}}{{size}}`
 e.g. `u-malg` or `u-sm-pvsm`.
 
 **Breakpoints**
@@ -510,12 +516,12 @@ e.g. `u-malg` or `u-sm-pvsm`.
 + `md-`
 + `-lg`
 + `-xl`
- 
+
 **Type**
 
 + `padding-` or `p`
 + `margin-` or `m`
- 
+
 **Direction**
 
 + `top-` or `t`
@@ -525,7 +531,7 @@ e.g. `u-malg` or `u-sm-pvsm`.
 + `right-` `r`
 + `horizontal-` `h`
 + `all-` `a`
- 
+
 **Size**
 
 + `xs`
@@ -553,6 +559,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-man,
   .u#{$namespace}-margin-all-n {
     margin-top: 0 !important;
+  }
+  .u#{$namespace}-mtxxs,
+  .u#{$namespace}-margin-top-xxs,
+  .u#{$namespace}-mvxxs,
+  .u#{$namespace}-margin-vertical-xxs,
+  .u#{$namespace}-maxxs,
+  .u#{$namespace}-margin-all-xxs {
+    margin-top: $space-xxs !important;
   }
   .u#{$namespace}-mtxs,
   .u#{$namespace}-margin-top-xs,
@@ -594,6 +608,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-margin-all-xl {
     margin-top: $space-xl !important;
   }
+  .u#{$namespace}-mtxxl,
+  .u#{$namespace}-margin-top-xxl,
+  .u#{$namespace}-mvxxl,
+  .u#{$namespace}-margin-vertical-xxl,
+  .u#{$namespace}-maxxl,
+  .u#{$namespace}-margin-all-xxl {
+    margin-top: $space-xxl !important;
+  }
   .u#{$namespace}-mbn,
   .u#{$namespace}-margin-bottom-n,
   .u#{$namespace}-mvn,
@@ -601,6 +623,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-man,
   .u#{$namespace}-margin-all-n {
     margin-bottom: 0 !important;
+  }
+  .u#{$namespace}-mbxxs,
+  .u#{$namespace}-margin-bottom-xxs,
+  .u#{$namespace}-mvxxs,
+  .u#{$namespace}-margin-vertical-xxs,
+  .u#{$namespace}-maxxs,
+  .u#{$namespace}-margin-all-xxs {
+    margin-bottom: $space-xxs !important;
   }
   .u#{$namespace}-mbxs,
   .u#{$namespace}-margin-bottom-xs,
@@ -642,6 +672,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-margin-all-xl {
     margin-bottom: $space-xl !important;
   }
+  .u#{$namespace}-mbxxl,
+  .u#{$namespace}-margin-bottom-xxl,
+  .u#{$namespace}-mvxxl,
+  .u#{$namespace}-margin-vertical-xxl,
+  .u#{$namespace}-maxxl,
+  .u#{$namespace}-margin-all-xxl {
+    margin-bottom: $space-xxl !important;
+  }
   .u#{$namespace}-mln,
   .u#{$namespace}-margin-left-n,
   .u#{$namespace}-mhn,
@@ -649,6 +687,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-man,
   .u#{$namespace}-margin-all-n {
     margin-left: 0 !important;
+  }
+  .u#{$namespace}-mlxxs,
+  .u#{$namespace}-margin-left-xxs,
+  .u#{$namespace}-mhxxs,
+  .u#{$namespace}-margin-horizontal-xxs,
+  .u#{$namespace}-maxxs,
+  .u#{$namespace}-margin-all-xxs {
+    margin-left: $space-xxs !important;
   }
   .u#{$namespace}-mlxs,
   .u#{$namespace}-margin-left-xs,
@@ -690,6 +736,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-margin-all-xl {
     margin-left: $space-xl !important;
   }
+  .u#{$namespace}-mlxxl,
+  .u#{$namespace}-margin-left-xxl,
+  .u#{$namespace}-mhxxl,
+  .u#{$namespace}-margin-horizontal-xxl,
+  .u#{$namespace}-maxxl,
+  .u#{$namespace}-margin-all-xxl {
+    margin-left: $space-xxl !important;
+  }
   .u#{$namespace}-mrn,
   .u#{$namespace}-margin-right-n,
   .u#{$namespace}-mhn,
@@ -697,6 +751,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-man,
   .u#{$namespace}-margin-all-n {
     margin-right: 0 !important;
+  }
+  .u#{$namespace}-mrxxs,
+  .u#{$namespace}-margin-right-xxs,
+  .u#{$namespace}-mhxxs,
+  .u#{$namespace}-margin-horizontal-xxs,
+  .u#{$namespace}-maxxs,
+  .u#{$namespace}-margin-all-xxs {
+    margin-right: $space-xxs !important;
   }
   .u#{$namespace}-mrxs,
   .u#{$namespace}-margin-right-xs,
@@ -738,6 +800,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-margin-all-xl {
     margin-right: $space-xl !important;
   }
+  .u#{$namespace}-mrxxl,
+  .u#{$namespace}-margin-right-xxl,
+  .u#{$namespace}-mhxxl,
+  .u#{$namespace}-margin-horizontal-xxl,
+  .u#{$namespace}-maxxl,
+  .u#{$namespace}-margin-all-xxl {
+    margin-right: $space-xxl !important;
+  }
   .u#{$namespace}-mha,
   .u#{$namespace}-margin-horizontal-auto {
     margin-left: auto !important;
@@ -753,6 +823,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-pan,
   .u#{$namespace}-padding-all-n {
     padding-top: 0 !important;
+  }
+  .u#{$namespace}-ptxxs,
+  .u#{$namespace}-padding-top-xxs,
+  .u#{$namespace}-pvxxs,
+  .u#{$namespace}-padding-vertical-xxs,
+  .u#{$namespace}-paxxs,
+  .u#{$namespace}-padding-all-xxs {
+    padding-top: $space-xxs !important;
   }
   .u#{$namespace}-ptxs,
   .u#{$namespace}-padding-top-xs,
@@ -794,6 +872,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-padding-all-xl {
     padding-top: $space-xl !important;
   }
+  .u#{$namespace}-ptxxl,
+  .u#{$namespace}-padding-top-xxl,
+  .u#{$namespace}-pvxxl,
+  .u#{$namespace}-padding-vertical-xxl,
+  .u#{$namespace}-paxxl,
+  .u#{$namespace}-padding-all-xxl {
+    padding-top: $space-xxl !important;
+  }
   .u#{$namespace}-pbn,
   .u#{$namespace}-padding-bottom-n,
   .u#{$namespace}-pvn,
@@ -801,6 +887,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-pan,
   .u#{$namespace}-padding-all-n {
     padding-bottom: 0 !important;
+  }
+  .u#{$namespace}-pbxxs,
+  .u#{$namespace}-padding-bottom-xxs,
+  .u#{$namespace}-pvxxs,
+  .u#{$namespace}-padding-vertical-xxs,
+  .u#{$namespace}-paxxs,
+  .u#{$namespace}-padding-all-xxs {
+    padding-bottom: $space-xxs !important;
   }
   .u#{$namespace}-pbxs,
   .u#{$namespace}-padding-bottom-xs,
@@ -842,6 +936,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-padding-all-xl {
     padding-bottom: $space-xl !important;
   }
+  .u#{$namespace}-pbxxl,
+  .u#{$namespace}-padding-bottom-xxl,
+  .u#{$namespace}-pvxxl,
+  .u#{$namespace}-padding-vertical-xxl,
+  .u#{$namespace}-paxxl,
+  .u#{$namespace}-padding-all-xxl {
+    padding-bottom: $space-xxl !important;
+  }
   .u#{$namespace}-pln,
   .u#{$namespace}-padding-left-n,
   .u#{$namespace}-phn,
@@ -849,6 +951,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-pan,
   .u#{$namespace}-padding-all-n {
     padding-left: 0 !important;
+  }
+  .u#{$namespace}-plxxs,
+  .u#{$namespace}-padding-left-xxs,
+  .u#{$namespace}-phxxs,
+  .u#{$namespace}-padding-horizontal-xxs,
+  .u#{$namespace}-paxxs,
+  .u#{$namespace}-padding-all-xxs {
+    padding-left: $space-xxs !important;
   }
   .u#{$namespace}-plxs,
   .u#{$namespace}-padding-left-xs,
@@ -890,6 +1000,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-padding-all-xl {
     padding-left: $space-xl !important;
   }
+  .u#{$namespace}-plxxl,
+  .u#{$namespace}-padding-left-xxl,
+  .u#{$namespace}-phxxl,
+  .u#{$namespace}-padding-horizontal-xxl,
+  .u#{$namespace}-paxxl,
+  .u#{$namespace}-padding-all-xxl {
+    padding-left: $space-xxl !important;
+  }
   .u#{$namespace}-prn,
   .u#{$namespace}-padding-right-n,
   .u#{$namespace}-phn,
@@ -897,6 +1015,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-pan,
   .u#{$namespace}-padding-all-n {
     padding-right: 0 !important;
+  }
+  .u#{$namespace}-prxxs,
+  .u#{$namespace}-padding-right-xxs,
+  .u#{$namespace}-phxxs,
+  .u#{$namespace}-padding-horizontal-xxs,
+  .u#{$namespace}-paxxs,
+  .u#{$namespace}-padding-all-xxs {
+    padding-right: $space-xxs !important;
   }
   .u#{$namespace}-prxs,
   .u#{$namespace}-padding-right-xs,
@@ -937,6 +1063,14 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-paxl,
   .u#{$namespace}-padding-all-xl {
     padding-right: $space-xl !important;
+  }
+  .u#{$namespace}-prxxl,
+  .u#{$namespace}-padding-right-xxl,
+  .u#{$namespace}-phxxl,
+  .u#{$namespace}-padding-horizontal-xxl,
+  .u#{$namespace}-paxxl,
+  .u#{$namespace}-padding-all-xxl {
+    padding-right: $space-xxl !important;
   }
 }
 
@@ -1072,15 +1206,15 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
   }
   .t#{$namespace}-lssm,
   .t#{$namespace}-letter-sm {
-    letter-spacing: $letter-sm !important;
+    letter-spacing: $text-letter-sm !important;
   }
   .t#{$namespace}-lsmd,
   .t#{$namespace}-letter-md {
-    letter-spacing: $letter-md !important;
+    letter-spacing: $text-letter-md !important;
   }
   .t#{$namespace}-lslg,
   .t#{$namespace}-letter-lg {
-    letter-spacing: $letter-lg !important;
+    letter-spacing: $text-letter-lg !important;
   }
   .t#{$namespace}-c,
   .t#{$namespace}-text-center {
@@ -1116,23 +1250,23 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
   }
   .t#{$namespace}-lxs,
   .t#{$namespace}-line-xs {
-    line-height: $line-xs !important;
+    line-height: $text-line-xs !important;
   }
   .t#{$namespace}-lsm,
   .t#{$namespace}-line-sm {
-    line-height: $line-sm !important;
+    line-height: $text-line-sm !important;
   }
   .t#{$namespace}-lmd,
   .t#{$namespace}-line-md {
-    line-height: $line-md !important;
+    line-height: $text-line-md !important;
   }
   .t#{$namespace}-llg,
   .t#{$namespace}-line-lg {
-    line-height: $line-lg !important;
+    line-height: $text-line-lg !important;
   }
   .t#{$namespace}-lxl,
   .t#{$namespace}-line-xl {
-    line-height: $line-xl !important;
+    line-height: $text-line-xl !important;
   }
   .t#{$namespace}-h,
   .t#{$namespace}-hyphenate {
