@@ -1,5 +1,6 @@
 /* v0
  *
+*= require _lib/v0/v0
  *= require _lib/touch/jquery.ui.touch-punch.min
  *= require _lib/ajaxchimp/jquery.ajaxchimp
  *= require _lib/ajaxchimp/jquery.ajaxchimp.langs

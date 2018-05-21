@@ -1,5 +1,5 @@
 ---
-deploy: '../../Dropbox/smallvictori.es-staging/xxix/'
+deploy: ''
 source: _sv
 destination: 'build'
 source_stylesheet: application.scss
