@@ -1,8 +1,6 @@
 /* v0
  *
- *= require _lib/bootstrap/bootstrap
  *= require _lib/touch/jquery.ui.touch-punch.min
- *= require _lib/jquery.sidenotes/jquery.sidenotes
  *= require _lib/ajaxchimp/jquery.ajaxchimp
  *= require _lib/ajaxchimp/jquery.ajaxchimp.langs
  *= require _lib/jquery.finger/jquery.finger
