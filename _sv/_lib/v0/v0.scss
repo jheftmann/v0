@@ -225,6 +225,12 @@ The value for these break-points is set in [variables][screen-sizes].
   }
 }
 
+@mixin xxl {
+  @include from($screen-xxl-min) {
+    @content;
+  }
+}
+
 /*doc
 ---
 title: Background Image

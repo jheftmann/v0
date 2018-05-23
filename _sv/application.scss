@@ -3,11 +3,10 @@
 */
 $base-unit:                              10px;
 
-$screen-xxs-min:                         375px !default;
-$screen-xs-min:                          480px !default;
-$screen-sm-min:                          768px !default;
-$screen-md-min:                          1024px !default;
-$screen-lg-min:                          1300px !default;
+$screen-xs-min:                          0 !default;
+$screen-sm-min:                          576px !default;
+$screen-md-min:                          768px !default;
+$screen-lg-min:                          1200px !default;
 $screen-xl-min:                          1500px !default;
 $screen-xxl-min:                         1800px !default;
 
@@ -16,15 +15,17 @@ $grid-columns:                           12 !default;
 $grid-gutter-width:                      25px !default;
 $grid-breakpoints: (
   // Extra small screen / phone
-  xs: 0,
+  xs: $screen-xs-min,
   // Small screen / phone
-  sm: 576px,
+  sm: $screen-sm-min,
   // Medium screen / tablet
-  md: 768px,
+  md: $screen-md-min,
   // Large screen / desktop
-  lg: 992px,
+  lg: $screen-lg-min,
   // Extra large screen / wide desktop
-  xl: 1200px
+  xl: $screen-xl-min,
+  // Jumbotron
+  xxl: $screen-xxl-min
 );
 $container-max-widths: (
   sm: 540px,
@@ -52,25 +53,13 @@ $text-lg:                                50px !default;
 $text-xl:                                75px !default;
 $text-xxl:                               100px !default;
 
-//
-// $sm-text-base:
-// $sm-text-xxs:                            $text-xxs !default;
-// $sm-text-xs:                             $text-xs !default;
-// $sm-text-sm:                             $text-sm !default;
-// $sm-text-md:                             $text-md !default;
-// $sm-text-lg:                             $text-lg !default;
-// $sm-text-xl:                             $text-xl !default;
-// $sm-text-xxl:                            $text-xxl !default;
-
 // variable type sizes
 $text-v-base:                            2vw;
-$text-v-xxs:                             2vw;
-$text-v-xs:                              2vw;
-$text-v-sm:                              2vw;
+$text-v-xs:                              6vw;
+$text-v-sm:                              8vw;
 $text-v-md:                              $text-v-base;
-$text-v-lg:                              2vw;
-$text-v-xl:                              2vw;
-$text-v-xxl:                             2vw;
+$text-v-lg:                              10vw;
+$text-v-xl:                              12vw;
 
 // line height
 $text-line-base:                         1.0;
@@ -109,7 +98,7 @@ $color-light:                            white;
 $color-disabled:                         $color-gray;
 $color-alert:                            red;
 
-//
+// borders
 $border-base:                            1px solid $color-base;
 $border-sm:                              $border-base;
 $border-md:                              2px solid $color-base;
@@ -120,28 +109,13 @@ $border-lg:                              5px solid $color-base;
 */
 $gutter:                                 $space-base;
 $layout-outer:                           $gutter * 2;
-
-// $nav-height-sm:
 $nav-height:                             $space-xl;
 
 
-///
-
+/*
+// imports
+*/
 @import '_lib/v0/v0';
-// @include loader;
-// @include overlay;
-
-// @import "_lib/bootstrap/variables";
-// @import "_lib/bootstrap/mixins";
-// @import "_lib/bootstrap/scaffolding";
-// @import "_lib/bootstrap/buttons";
-// @import "_lib/bootstrap/dropdowns";
-// @import "_lib/bootstrap/grid";
-// @import "_lib/bootstrap/forms";
-// @import "_lib/bootstrap/media";
-// @import "_lib/bootstrap/modals";
-// @import "_lib/bootstrap/utilities";
-// @import "_lib/bootstrap/responsive-utilities";
 @import "_lib/bootstrap/bootstrap";
 
 @import 'scss/fonts';
@@ -190,4 +164,28 @@ body {
 
 .sv-badge {
   display: none;
+}
+
+.size-tester {
+  height: 100vh;
+  padding: 50px;
+
+  &:after {
+    content: "xs";
+    @include sm {
+      content: "sm";
+    }
+    @include md {
+      content: "md";
+    }
+    @include lg {
+      content: "lg";
+    }
+    @include xl {
+      content: "xl";
+    }
+    @include xxl {
+      content: "xxl";
+    }
+  }
 }
