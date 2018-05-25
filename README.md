@@ -3,6 +3,7 @@ Start a new site quickly and easily.
 
 ## Getting started
 1. Install the [SV gem](https://github.com/XXIX/smallvictories-gem)
+2. Download and unpackage the .zip of v0
 2. Run `sv watch`
 3. Compiles to `/build`
 4. Configure `_sv_config.yml`
