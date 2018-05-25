@@ -23,7 +23,7 @@ v0 uses Bootstrap 4’s Layout and Utilities tools:
 These are still supported but should be phased out in favor of Bootstrap helpers:
 
 - positioning – `u-relative`, etc.
-– display – `u-block`, etc.
+- display – `u-block`, etc.
 - spacing – `u-sm-pvlg`, etc.
 
 ## To do
