@@ -11,7 +11,7 @@ Start a new site quickly and easily.
 2. configure `fonts.scss`
 
 ## Utilities and Layouting
-v0 uses Bootstrap 4’s Layout and Utilities helpers:
+v0 uses Bootstrap 4’s Layout and Utilities tools:
 
 - [Bootstrap—Layout](https://getbootstrap.com/docs/4.1/layout/overview/)
 - [Bootstrap—Utilities](https://getbootstrap.com/docs/4.1/utilities/borders/)
@@ -20,7 +20,11 @@ v0 uses Bootstrap 4’s Layout and Utilities helpers:
 - Use `@include sm { ... }` but Bootstrap `@include media-breakpoint-up(xl) { ... }` is also supported
 
 ## Deprecated
+These are still supported but should be phased out in favor of Bootstrap helpers:
+
 - positioning – `u-relative`, etc.
+– display – `u-block`, etc.
+- spacing – `u-sm-pvlg`, etc.
 
 ## To do
 + [x] Update bootstrap
