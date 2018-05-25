@@ -116,7 +116,7 @@ $nav-height:                             $space-xl;
 // imports
 */
 @import '_lib/v0/v0';
-// @import "_lib/bootstrap/bootstrap";
+@import "_lib/bootstrap/bootstrap";
 
 @import 'scss/fonts';
 @import 'scss/loader';
