@@ -11,9 +11,10 @@ Start a new site quickly and easily.
 2. configure `fonts.scss`
 
 ## Utilities and Layouting
-- [Layout](https://getbootstrap.com/docs/4.1/layout/overview/)
-- [Utilities](https://getbootstrap.com/docs/4.1/utilities/borders/)
-- We don’t use any of Bootstrap’s Compontents.
+v0 uses Bootstrap 4’s Layout and Utilities helpers:
+
+- [Bootstrap—Layout](https://getbootstrap.com/docs/4.1/layout/overview/)
+- [Bootstrap—Utilities](https://getbootstrap.com/docs/4.1/utilities/borders/)
 
 ### Differences
 - Use `@include sm { ... }` but Bootstrap `@include media-breakpoint-up(xl) { ... }` is also supported
