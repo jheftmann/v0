@@ -10,13 +10,21 @@ Start a new site quickly and easily.
 6. Configure `application.scss` with project variables and imports for the SCSS components you need
 2. configure `fonts.scss`
 
+## Transporting v0
+How would you install v0 in an existing project?
+
+## Typography
+- philosophy
+- workflow
+- usage
+
 ## Utilities and Layouting
 v0 uses Bootstrap 4’s Layout and Utilities tools:
 
 - [Bootstrap—Layout](https://getbootstrap.com/docs/4.1/layout/overview/)
 - [Bootstrap—Utilities](https://getbootstrap.com/docs/4.1/utilities/borders/)
 
-### Differences
+## Differences
 - Use `@include sm { ... }` but Bootstrap `@include media-breakpoint-up(xl) { ... }` is also supported
 
 ## Deprecated
