@@ -77,7 +77,7 @@ $text-letter-md:                         .03em;
 $text-letter-lg:                         .05em;
 $text-letter-xl:                         .1em;
 
-// spacing
+// spacing – DEPRECATED
 $space-base:                             25px;
 $space-xxs:                              5px;
 $space-xs:                               10px !default;
@@ -87,13 +87,34 @@ $space-lg:                               75px !default;
 $space-xl:                               100px !default;
 $space-xxl:                              200px !default;
 
+// spacing – new (Bootstrap)
+// override bootstrap spacers
+// $spacer:               25px !default;
+$spacer-1:             5px;
+$spacer-2:             10px;
+$spacer-3:             25px;
+$spacer-4:             50px;
+$spacer-5:             75px;
+$spacer-6:             100px;
+
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer-1),
+  2: ($spacer-2),
+  3: ($spacer-3),
+  4: ($spacer-4),
+  5: ($spacer-5),
+  6: ($spacer-6)
+), $spacers);
+
 // color
 $color-base:                             black;
 $color-brand:                            #ffeb0b;
 $color-brand-secondary:                  green;
 $color-gray:                             #e3e7e1;
 $color-dark:                             black;
-$collr-mid:                              gray;
+$color-mid:                              gray;
 $color-light:                            white;
 $color-disabled:                         $color-gray;
 $color-alert:                            red;
@@ -110,7 +131,6 @@ $border-lg:                              5px solid $color-base;
 $gutter:                                 $space-base;
 $layout-outer:                           $gutter * 2;
 $nav-height:                             $space-xl;
-
 
 /*
 // imports

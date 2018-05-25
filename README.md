@@ -26,5 +26,5 @@ Start a new site quickly and easily.
 + [x] CSS grid and flexbox helpers
 + [x] Typography updates
 + [x] Variables updates
-+ [ ] Helpers
-+ [ ] Variables as classes e.g. `$letter-sm` > `.letter-sm {}`
++ [x] Helpers
++ [x] Variables as classes e.g. `$letter-sm` > `.letter-sm {}`

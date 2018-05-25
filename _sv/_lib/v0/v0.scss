@@ -1274,6 +1274,24 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
   .t#{$namespace}-line-xl {
     line-height: $text-line-xl !important;
   }
+  .t#{$namespace}-letter-n {
+    letter-spacing: 0 !important;
+  }
+  .t#{$namespace}-letter-xs {
+    letter-spacing: $text-letter-xs !important;
+  }
+  .t#{$namespace}-letter-sm {
+    letter-spacing: $text-letter-sm !important;
+  }
+  .t#{$namespace}-letter-md {
+    letter-spacing: $text-letter-md !important;
+  }
+  .t#{$namespace}-letter-lg {
+    letter-spacing: $text-letter-lg !important;
+  }
+  .t#{$namespace}-letter-xl {
+    letter-spacing: $text-letter-xl !important;
+  }
   .t#{$namespace}-h,
   .t#{$namespace}-hyphenate {
     overflow-wrap: break-word;
@@ -1286,6 +1304,10 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
 }
 
 @include text-setup("");
+
+@include xs {
+  @include text-setup("-xs");
+}
 
 @include sm {
   @include text-setup("-sm");
@@ -1301,6 +1323,10 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
 
 @include xl {
   @include text-setup("-xl");
+}
+
+@include xl {
+  @include text-setup("-xxl");
 }
 
 /*doc
@@ -1618,4 +1644,116 @@ You can make an overlay compatible with Bootstrap collapse by adding the `is-col
       }
     }
   }
+}
+
+// color
+// text
+.t-color-base {
+  color: $color-base;
+}
+
+.t-color-brand {
+  color: $color-brand;
+}
+
+.t-color-brand-secondary {
+  color: $color-brand-secondary;
+}
+
+.t-color-gray {
+  color: $color-gray;
+}
+
+.t-color-dark {
+  color: $color-dark;
+}
+
+.t-color-mid {
+  color: $color-mid;
+}
+
+.t-color-light {
+  color: $color-light;
+}
+
+.t-color-disabled {
+  color: $color-disabled;
+}
+
+.t-color-alert {
+  color: $color-alert;
+}
+
+// borders
+.b-color-base {
+  border-color: $color-base;
+}
+
+.b-color-brand {
+  border-color: $color-brand;
+}
+
+.b-color-brand-secondary {
+  border-color: $color-brand-secondary;
+}
+
+.b-color-gray {
+  border-color: $color-gray;
+}
+
+.b-color-dark {
+  border-color: $color-dark;
+}
+
+.b-color-mid {
+  border-color: $color-mid;
+}
+
+.b-color-light {
+  border-color: $color-light;
+}
+
+.b-color-disabled {
+  border-color: $color-disabled;
+}
+
+.b-color-alert {
+  border-color: $color-alert;
+}
+
+// fill
+.u-color-base {
+  background-color: $color-base;
+}
+
+.u-color-brand {
+  background-color: $color-brand;
+}
+
+.u-color-brand-secondary {
+  background-color: $color-brand-secondary;
+}
+
+.u-color-gray {
+  background-color: $color-gray;
+}
+
+.u-color-dark {
+  background-color: $color-dark;
+}
+
+.u-color-mid {
+  background-color: $color-mid;
+}
+
+.u-color-light {
+  background-color: $color-light;
+}
+
+.u-color-disabled {
+  background-color: $color-disabled;
+}
+
+.u-color-alert {
+  background-color: $color-alert;
 }
