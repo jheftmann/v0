@@ -18,10 +18,8 @@ Start a new site quickly and easily.
 ### Differences
 - Use `@include sm { ... }` but Bootstrap `@include media-breakpoint-up(xl) { ... }` is also supported
 
-
 ## Deprecated
 - positioning – `u-relative`, etc.
-
 
 ## To do
 + [x] Update bootstrap
