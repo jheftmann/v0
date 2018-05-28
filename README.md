@@ -53,8 +53,8 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [ ] variablize set and reading text namespaces
 + [ ] move font smoothing
 + [ ] add ::selection to defaults
-+ [ ] delete bootstrap 3
-+ [ ] placeholder images
++ [x] delete bootstrap 3
++ [x] placeholder images
 + [ ] em, strong in .t-reading
 + [ ] default line height on t-set headlines
 + [ ] default letter on t-set reading
