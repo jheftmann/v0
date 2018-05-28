@@ -1210,18 +1210,6 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
   .t#{$namespace}-xxl {
     font-size: $text-xxl !important;
   }
-  .t#{$namespace}-lssm,
-  .t#{$namespace}-letter-sm {
-    letter-spacing: $text-letter-sm !important;
-  }
-  .t#{$namespace}-lsmd,
-  .t#{$namespace}-letter-md {
-    letter-spacing: $text-letter-md !important;
-  }
-  .t#{$namespace}-lslg,
-  .t#{$namespace}-letter-lg {
-    letter-spacing: $text-letter-lg !important;
-  }
   .t#{$namespace}-c,
   .t#{$namespace}-text-center {
     text-align: center !important;
@@ -1274,7 +1262,12 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
   .t#{$namespace}-line-xl {
     line-height: $text-line-xl !important;
   }
-  .t#{$namespace}-letter-n {
+  .t#{$namespace}-ls-n,
+  .t#{$namespace}-letter-n,
+  .t#{$namespace}-ls-none,
+  .t#{$namespace}-letter-none,
+  .t#{$namespace}-ls-0,
+  .t#{$namespace}-letter-0 {
     letter-spacing: 0 !important;
   }
   .t#{$namespace}-letter-xs {
@@ -1756,4 +1749,9 @@ You can make an overlay compatible with Bootstrap collapse by adding the `is-col
 
 .u-color-alert {
   background-color: $color-alert;
+}
+
+// Utilities
+.no-scroll {
+  overflow: hidden;
 }

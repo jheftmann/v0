@@ -42,23 +42,23 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] Variables updates
 + [x] Helpers
 + [x] Variables as classes e.g. `$letter-sm` > `.letter-sm {}`
-+ [ ] clean up `cursors.scss`
-+ [ ] make default open graph and favicons images
-+ [ ] move tests
-+ [ ] `body {-moz-osx-font-smoothing: grayscale;}`
-+ [ ] `.sv-badge {display: none !important;}`
-+ [ ] image filepath
++ [x] clean up `cursors.scss`
++ [x] make default open graph and favicons images
++ [x] move tests
++ [x] `body {-moz-osx-font-smoothing: grayscale;}`
++ [x] `.sv-badge {display: none !important;}`
++ [x] image filepath
 + [ ] improve type setup
 + [ ] update font path variable
 + [ ] variablize set and reading text namespaces
-+ [ ] move font smoothing
-+ [ ] add ::selection to defaults
++ [x] move font smoothing
++ [x] add ::selection to defaults
 + [x] delete bootstrap 3
 + [x] placeholder images
-+ [ ] em, strong in .t-reading
-+ [ ] default line height on t-set headlines
-+ [ ] default letter on t-set reading
-+ [ ] letter spacing none class
-+ [ ] update ul > li in t-set
-+ [ ] nested lists
-+ [ ] body min height vh
++ [x] em, strong in .t-reading
++ [x] default line height on t-set headlines
++ [x] default letter on t-set reading
++ [x] letter spacing none class
++ [x] update ul > li in t-set
++ [x] nested lists
++ [x] body min height vh

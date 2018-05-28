@@ -128,6 +128,8 @@ $border-lg:                              5px solid $color-base;
 /*
 // project variables
 */
+$image-filepath:                         "_assets/images/";
+
 $gutter:                                 $space-base;
 $layout-outer:                           $gutter * 2;
 $nav-height:                             $space-xl;
@@ -135,20 +137,32 @@ $nav-height:                             $space-xl;
 /*
 // imports
 */
-@import '_lib/v0/v0';
 @import "_lib/bootstrap/bootstrap";
+@import '_lib/v0/v0';
 
-@import 'scss/fonts';
-@import 'scss/loader';
+@import 'scss/tests';
 @import 'scss/mixins';
+@import 'scss/loader';
 @import 'scss/cursors';
+@import 'scss/fonts';
 @import 'scss/type';
 @import 'scss/media';
 @import 'scss/layout';
 @import 'scss/nav';
 
+* {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  margin: 0;
+}
+
 body {
   position: relative;
+  min-height: 100vh;
+  @include cursor-default;
 
   .touch & {
     cursor: pointer;
@@ -159,53 +173,10 @@ body {
   }
 }
 
-* {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-.ensp {
-  display: inline-block !important;
-  width: 0.4em;
-}
-
-.faux-body {
-  height: 100%;
-  overflow: auto;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
 .sv-badge {
-  display: none;
+  display: none !important;
 }
 
-.size-tester {
-  height: 100vh;
-  padding: 50px;
-
-  &:after {
-    content: "xs";
-    @include sm {
-      content: "sm";
-    }
-    @include md {
-      content: "md";
-    }
-    @include lg {
-      content: "lg";
-    }
-    @include xl {
-      content: "xl";
-    }
-    @include xxl {
-      content: "xxl";
-    }
-  }
+::selection {
+  background: $color-mid;
 }
