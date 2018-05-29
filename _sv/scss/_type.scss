@@ -35,7 +35,7 @@ body {
   font-size: $text-base;
   line-height: $text-line-base;
   -webkit-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   em {
     @include primary-italic;
@@ -168,36 +168,60 @@ h6 {
 h1 {
   &.t-set {
     font-size: $text-xxl;
+
+    @include sm {
+      font-size: $text-xs-xxl;
+    }
   }
 }
 
 h2 {
   &.t-set {
     font-size: $text-xl;
+
+    @include sm {
+      font-size: $text-xs-xl;
+    }
   }
 }
 
 h3 {
   &.t-set {
     font-size: $text-lg;
+
+    @include sm {
+      font-size: $text-xs-lg;
+    }
   }
 }
 
 h4 {
   &.t-set {
     font-size: $text-md;
+
+    @include sm {
+      font-size: $text-xs-md;
+    }
   }
 }
 
 h5 {
   &.t-set {
     font-size: $text-sm;
+
+    @include sm {
+      font-size: $text-xs-xxl;
+    }
   }
 }
 
 h6 {
   &.t-set {
     font-size: $text-xxs;
+
+    @include sm {
+      font-size: $text-xs-xxl;
+    }
   }
 }
 
@@ -411,6 +435,19 @@ T-SET + T-READING
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+
+    em {
+      @include primary-italic;
+    }
+
+    strong {
+      @include tertiary;
+
+    }
+
+    em strong {
+      @include tertiary;
     }
   }
 

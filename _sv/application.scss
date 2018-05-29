@@ -53,6 +53,15 @@ $text-lg:                                50px !default;
 $text-xl:                                75px !default;
 $text-xxl:                               100px !default;
 
+// mobile sizes
+$text-xs-xxs:                            13px !default;
+$text-xs-xs:                             $text-base !default;
+$text-xs-sm:                             30px !default;
+$text-xs-md:                             40px !default;
+$text-xs-lg:                             60px !default;
+$text-xs-xl:                             70px !default;
+$text-xs-xxl:                            80px !default;
+
 // variable type sizes
 $text-v-base:                            2vw;
 $text-v-xs:                              6vw;
@@ -77,7 +86,7 @@ $text-letter-md:                         .03em;
 $text-letter-lg:                         .05em;
 $text-letter-xl:                         .1em;
 
-// spacing – DEPRECATED
+// spacing
 $space-base:                             25px;
 $space-xxs:                              5px;
 $space-xs:                               10px !default;
@@ -90,32 +99,33 @@ $space-xxl:                              200px !default;
 // spacing – new (Bootstrap)
 // override bootstrap spacers
 // $spacer:               25px !default;
-$spacer-1:             5px;
-$spacer-2:             10px;
-$spacer-3:             25px;
-$spacer-4:             50px;
-$spacer-5:             75px;
-$spacer-6:             100px;
+// $spacer-1:             5px;
+// $spacer-2:             10px;
+// $spacer-3:             25px;
+// $spacer-4:             50px;
+// $spacer-5:             75px;
+// $spacer-6:             100px;
 
 $spacers: () !default;
 $spacers: map-merge((
   0: 0,
-  1: ($spacer-1),
-  2: ($spacer-2),
-  3: ($spacer-3),
-  4: ($spacer-4),
-  5: ($spacer-5),
-  6: ($spacer-6)
+  1: ($space-xxs),
+  2: ($space-xs),
+  3: ($space-sm),
+  4: ($space-md),
+  5: ($space-lg),
+  6: ($space-xl),
+  7: ($space-xxl)
 ), $spacers);
 
 // color
-$color-base:                             black;
+$color-base:                             #000000;
 $color-brand:                            #ffeb0b;
 $color-brand-secondary:                  green;
 $color-gray:                             #e3e7e1;
-$color-dark:                             black;
+$color-dark:                             #000000;
 $color-mid:                              gray;
-$color-light:                            white;
+$color-light:                            #ffffff;
 $color-disabled:                         $color-gray;
 $color-alert:                            red;
 
