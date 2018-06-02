@@ -61,6 +61,6 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] update ul > li in t-set
 + [x] nested lists
 + [x] body min height vh
-+ [ ] border utilities
-+ [ ] color reverse utilities
-+ [ ] background utilities
++ [x] border utilities
++ [x] color reverse utilities
++ [x] background utilities

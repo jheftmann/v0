@@ -1643,71 +1643,182 @@ You can make an overlay compatible with Bootstrap collapse by adding the `is-col
 // text
 .t-color-base {
   color: $color-base;
+  #{$t-color-children} {
+    color: $color-base;
+  }
 }
 
 .t-color-brand {
   color: $color-brand;
+  #{$t-color-children} {
+    color: $color-brand;
+  }
 }
 
 .t-color-brand-secondary {
   color: $color-brand-secondary;
+  #{$t-color-children} {
+    color: $color-brand-secondary;
+  }
 }
 
 .t-color-gray {
   color: $color-gray;
+  #{$t-color-children} {
+    color: $color-gray;
+  }
 }
 
 .t-color-dark {
   color: $color-dark;
+  #{$t-color-children} {
+    color: $color-dark;
+  }
 }
 
 .t-color-mid {
   color: $color-mid;
+  #{$t-color-children} {
+    color: $color-mid;
+  }
 }
 
 .t-color-light {
   color: $color-light;
+  #{$t-color-children} {
+    color: $color-light;
+  }
 }
 
 .t-color-disabled {
   color: $color-disabled;
+  #{$t-color-children} {
+    color: $color-disabled;
+  }
 }
 
 .t-color-alert {
   color: $color-alert;
+  #{$t-color-children} {
+    color: $color-alert;
+  }
 }
 
 // borders
+.b-none, .b-n, .border-none, .border-0, .b-0 {
+  border: 0;
+}
+
+.b-top, .b-t {
+  border-top: $border-base;
+}
+
+.b-right, .b-r {
+  border-right: $border-base;
+}
+
+.b-bottom, .b-b {
+  border-bottom: $border-base;
+}
+
+.b-left, .b-l {
+  border-left: $border-base;
+}
+
+//
+.b-all-sm, .b-a-sm {
+  border-all: $border-sm;
+}
+
+.b-top-sm, .b-t-sm {
+  border-top: $border-sm;
+}
+
+.b-right-sm, .b-r-sm {
+  border-right: $border-sm;
+}
+
+.b-bottom-sm, .b-b-sm {
+  border-bottom: $border-sm;
+}
+
+.b-left-sm, .b-l-sm {
+  border-left: $border-sm;
+}
+
+//
+.b-all-md, .b-a-md {
+  border: $border-md;
+}
+
+.b-top-md, .b-t-md {
+  border-top: $border-md;
+}
+
+.b-right-md, .b-r-md {
+  border-right: $border-md;
+}
+
+.b-bottom-md, .b-b-md {
+  border-bottom: $border-md;
+}
+
+.b-left-md, .b-l-md {
+  border-left: $border-md;
+}
+
+//
+.b-all-lg, .b-a-lg {
+  border: $border-lg;
+}
+
+.b-top-lg, .b-t-lg {
+  border-top: $border-lg;
+}
+
+.b-right-lg, .b-r-lg {
+  border-right: $border-lg;
+}
+
+.b-bottom-lg, .b-b-lg {
+  border-bottom: $border-lg;
+}
+
+.b-left-lg, .b-l-lg {
+  border-left: $border-lg;
+}
+
+// border colors
 .b-color-base {
-  border-color: $color-base;
+  border-color: $color-base !important;
 }
 
 .b-color-brand {
-  border-color: $color-brand;
+  border-color: $color-brand !important;
 }
 
 .b-color-brand-secondary {
-  border-color: $color-brand-secondary;
+  border-color: $color-brand-secondary !important;
 }
 
 .b-color-gray {
-  border-color: $color-gray;
+  border-color: $color-gray !important;
 }
 
 .b-color-dark {
-  border-color: $color-dark;
+  border-color: $color-dark !important;
 }
 
 .b-color-mid {
-  border-color: $color-mid;
+  border-color: $color-mid !important;
 }
 
 .b-color-light {
-  border-color: $color-light;
+  border-color: $color-light !important;
 }
 
 .b-color-disabled {
-  border-color: $color-disabled;
+  border-color: $color-disabled !important;
 }
 
 .b-color-alert {
@@ -1749,6 +1860,40 @@ You can make an overlay compatible with Bootstrap collapse by adding the `is-col
 
 .u-color-alert {
   background-color: $color-alert;
+}
+
+.colorway-dark {
+  @extend .u-color-dark;
+  @extend .t-color-light;
+}
+
+.colorway-light {
+  @extend .u-color-light;
+  @extend .t-color-dark;
+}
+
+// Background Images
+.bg-img-container,
+.background-image-container {
+
+  &.background-center-center {
+    background-position: center center;
+  }
+  &.background-no-repeat {
+    background-repeat: no-repeat;
+  }
+  &.background-contain {
+    background-size: contain;
+  }
+  &.background-cover {
+    background-size: contain;
+  }
+}
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 // Utilities

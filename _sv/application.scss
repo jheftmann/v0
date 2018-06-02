@@ -140,6 +140,8 @@ $border-lg:                              5px solid $color-base;
 */
 $image-filepath:                         "_assets/images/";
 
+$t-color-children:                       "p, li, a, h1, h2, h3, h4, h5, h6, span";
+
 $gutter:                                 $space-base;
 $layout-outer:                           $gutter * 2;
 $nav-height:                             $space-xl;
