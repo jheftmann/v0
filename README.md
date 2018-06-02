@@ -48,9 +48,8 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] `body {-moz-osx-font-smoothing: grayscale;}`
 + [x] `.sv-badge {display: none !important;}`
 + [x] image filepath
-+ [ ] improve type setup
 + [ ] update font path variable
-+ [ ] variablize set and reading text namespaces
++ [ ] variablize set and reading text namespaces - `#{$t-set}`
 + [x] move font smoothing
 + [x] add ::selection to defaults
 + [x] delete bootstrap 3
@@ -62,4 +61,6 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] update ul > li in t-set
 + [x] nested lists
 + [x] body min height vh
-+ [ ] border mixins
++ [ ] border utilities
++ [ ] color reverse utilities
++ [ ] background utilities

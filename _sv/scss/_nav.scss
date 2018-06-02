@@ -5,7 +5,8 @@
  z-index: 1002;
  height: $space-md;
 
-  .nav-inner {
+  .inner {
+    width: 100%;
    padding: $space-xs;
   }
 
@@ -15,6 +16,10 @@
   }
 
   a {
+
+    &.active {
+      border-bottom: $border-base;
+    }
 
     &:hover {
 

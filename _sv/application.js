@@ -7,6 +7,7 @@
  *= require _lib/jquery.finger/jquery.finger
  *= require _lib/hypher/hypher
  *= require _lib/hypher/en-us
+*= require _lib/v0/v0.pageController
  *
 */
 
