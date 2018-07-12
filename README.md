@@ -64,3 +64,6 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] border utilities
 + [x] color reverse utilities
 + [x] background utilities
++ [ ] add `.noprint` style
++ [ ] add version numbers
++ [ ] streamline type setup
