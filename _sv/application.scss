@@ -154,6 +154,7 @@ $nav-height:                             $space-xl;
 
 @import 'scss/tests';
 @import 'scss/mixins';
+@import 'scss/forms';
 @import 'scss/loader';
 @import 'scss/cursors';
 @import 'scss/fonts';
@@ -175,6 +176,7 @@ $nav-height:                             $space-xl;
 body {
   position: relative;
   min-height: 100vh;
+  background: $color-base;
   @include cursor-default;
 
   .touch & {

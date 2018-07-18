@@ -1,11 +1,39 @@
-// @mixin default-shadow {
-//   -webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.47);
-//      -moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.47);
-//           box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.47);
-// }
 //
-// @mixin has-shadow($x, $y, $blur, $spread, $color) {
-//   -webkit-box-shadow: $x $y $blur $spread $color;
-//      -moz-box-shadow: $x $y $blur $spread $color;
-//           box-shadow: $x $y $blur $spread $color;
-// }
+@mixin default-shadow {
+  -webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.47);
+     -moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.47);
+          box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.47);
+}
+
+//
+@mixin has-shadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+     -moz-box-shadow: $x $y $blur $spread $color;
+          box-shadow: $x $y $blur $spread $color;
+}
+
+//
+@mixin inset-border($width, $color) {
+  box-shadow: $width 0 0 0 $color, 0 $width 0 0 $color, $width $width 0 0 $color, $width 0 0 0 $color inset, 0 $width 0 0 $color inset;
+}
+
+  .inset-border {
+    @include inset-border(1px, black);
+  }
+
+  .inset-border-0 {
+    box-shadow: none;
+  }
+
+//
+@mixin bg-image-container($size) {
+  background-size: $size;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+  .bg-image-container {
+    @include bg-image-container;
+  }
+
+//
