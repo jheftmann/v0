@@ -65,5 +65,7 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] color reverse utilities
 + [x] background utilities
 + [x] add `.noprint` style
-+ [ ] add version numbers
-+ [x] streamline type setup
++ [ ] add version number
++ [ ] make a better type tester
++ [ ] make border mixins smarter
++ [ ] udpate mixins
