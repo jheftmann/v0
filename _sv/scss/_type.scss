@@ -1,62 +1,31 @@
-/* ////////////////////////////////////////////////
-Typogrpahy
-*/ ////////////////////////////////////////////////
-
-
-// Mixins
-// Edit default font appearance here
-@mixin primary {
-  font-family: $font-primary;
+//////////////////////
+// type setup
+@mixin font-primary {
+  font-family: $font-primary-family;
 }
 
-@mixin primary-italic {
-  font-family: $font-primary-italic;
+@mixin font-mono {
+  font-family: $font-mono-family;
 }
 
-@mixin secondary {
-  font-family: $font-secondary;
-}
+.text-primary {@include font-primary;}
+.text-mono {@include font-mono};
 
-@mixin secondary-heavy {
-  font-family: $font-secondary-heavy;
-}
-
-@mixin tertiary {
-  font-family: $font-tertiary;
-}
-
-@mixin tertiary-italic {
-  font-family: $font-tertiary-italic;
-}
-
+//////////////////////
+// default type styles
 body {
-  @include primary;
-  color: $color-dark;
+  @include font-primary;
+  color: $color-type-primary;
   font-size: $text-base;
   line-height: $text-line-base;
+  letter-spacing: $text-letter-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  em {
-    @include primary-italic;
-  }
-
-  b, strong {
-    @include secondary-heavy;
-  }
-
-  a {
-    text-decoration: none;
-
-    &:visited {
-      color: inherit;
-    }
-  }
-
-  * {
-    font-weight: normal;
-    font-style: normal;
-  }
+* {
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1,
@@ -65,7 +34,6 @@ h3,
 h4,
 h5,
 h6, {
-  @include secondary;
   letter-spacing: $text-letter-base;
   line-height: $text-line-base;
   font-size: $text-lg;
@@ -76,7 +44,6 @@ h6, {
 
 p,
 li {
-  @include primary;
   letter-spacing: $text-letter-md;
   line-height: $text-line-md;
   font-size: $text-sm;
@@ -95,6 +62,14 @@ ul, ol {
   }
 }
 
+i, b {
+  //
+}
+
+b, strong {
+  //
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -110,14 +85,13 @@ a {
 }
 
 blockquote {
-  @include primary-italic;
   padding: 0;
   margin: 0;
 }
 
 code,
 pre {
-  @include tertiary;
+  @include font-mono;
   color: $color-base;
 }
 
@@ -137,7 +111,6 @@ table {
   border-collapse: collapse;
 
   * {
-    @include tertiary;
     text-align: left;
   }
 
@@ -146,11 +119,8 @@ table {
   }
 }
 
-/* ////////////////////////////////////////////////
-T-SET
-`.t-set`
-*/ ////////////////////////////////////////////////
-
+//////////////////////
+// T-SET – `.t-set`
 h1,
 h2,
 h3,
@@ -158,67 +128,66 @@ h4,
 h5,
 h6 {
   &.t-set {
-    @include primary;
     line-height: $text-line-sm;
   }
 }
 
 h1 {
   &.t-set {
-    font-size: $text-xxl;
+    font-size: $text-xs-xxl;
 
     @include sm {
-      font-size: $text-xs-xxl;
+      font-size: $text-xxl;
     }
   }
 }
 
 h2 {
   &.t-set {
-    font-size: $text-xl;
+    font-size: $text-xs-xl;
 
     @include sm {
-      font-size: $text-xs-xl;
+      font-size: $text-xl;
     }
   }
 }
 
 h3 {
   &.t-set {
-    font-size: $text-lg;
+    font-size: $text-xs-lg;
 
     @include sm {
-      font-size: $text-xs-lg;
+      font-size: $text-lg;
     }
   }
 }
 
 h4 {
   &.t-set {
-    font-size: $text-md;
+    font-size: $text-xs-md;
 
     @include sm {
-      font-size: $text-xs-md;
+      font-size: $text-md;
     }
   }
 }
 
 h5 {
   &.t-set {
-    font-size: $text-sm;
+    font-size: $text-xs-sm;
 
     @include sm {
-      font-size: $text-xs-xxl;
+      font-size: $text-xxl;
     }
   }
 }
 
 h6 {
   &.t-set {
-    font-size: $text-xxs;
+    font-size: $text-xs-xxs;
 
     @include sm {
-      font-size: $text-xs-xxl;
+      font-size: $text-xxl;
     }
   }
 }
@@ -230,10 +199,6 @@ li {
     font-size: $text-base;
     letter-spacing: $text-letter-base;
     line-height: $text-line-base;
-
-    @include from(2000px) {
-      font-size: 100px;
-    }
 
     > a {
       border-bottom: 1px solid $color-base;
@@ -315,7 +280,6 @@ a {
 
 blockquote {
   &.t-set {
-    @include secondary-heavy;
     font-size: $text-md;
     padding: $space-md;
   }
@@ -325,10 +289,11 @@ hr {
   &.t-set {
     margin: $space-md 0;
     background: transparent;
-    border-top: $border-md;
+    border-top: $border-base;
   }
 }
 
+// these objects will never have a class of `.t-set` but will often have a parent with class `.t-set`
 .t-set {
 
   img {
@@ -342,7 +307,6 @@ hr {
   }
 
   sup {
-    @include secondary;
     margin-left: 6px;
     font-size: 40%;
     vertical-align: super;
@@ -356,21 +320,21 @@ hr {
     margin: $space-md 0;
 
     thead {
-      border-top: $border-sm;
-      border-bottom: $border-sm;
+      border-top: $border-base;
+      border-bottom: $border-base;
     }
 
     tbody {
-      border-bottom: $border-sm;
+      border-bottom: $border-base;
     }
 
     tr {
       height: $space-md;
-      border-bottom: $border-sm;
+      border-bottom: $border-base;
     }
 
     th, td {
-      border-right: $border-sm;
+      border-right: $border-base;
       padding: $space-xs;
 
       &:last-child {
@@ -379,6 +343,18 @@ hr {
     }
   }
 
+  // these object simply extend objects with `.t-set` class to children with parents `.t-set`
+  // h1 {
+  //   // `.t-set` things
+  // }
+  //
+  // will be the same as
+  //
+  // .t-set {
+  //   h1 {
+  //     // `.t-set` things
+  //   }
+  // }
   h1 {@extend h1.t-set;}
   h2 {@extend h2.t-set;}
   h3 {@extend h3.t-set;}
@@ -393,11 +369,8 @@ hr {
   hr {@extend hr.t-set;}
 }
 
-/* ////////////////////////////////////////////////
-T-SET + T-READING
-`.t-set.t-reading`
-*/ ////////////////////////////////////////////////
-
+////////////////////////////////////////////
+// T-SET + T-READING - `.t-set.t-reading`
 .t-reading {
 
   h1,
@@ -436,29 +409,28 @@ T-SET + T-READING
     }
 
     em {
-      @include primary-italic;
+      //
     }
 
     strong {
-      @include tertiary;
-
+      //
     }
 
     em strong {
-      @include tertiary;
+      //
     }
   }
 
   em {
-    @include primary-italic;
+    //
   }
 
   strong {
-    @include secondary-heavy;
+    //
   }
 
   em strong {
-    @include secondary-heavy;
+    //
   }
 
   ul,
@@ -507,12 +479,3 @@ T-SET + T-READING
     text-indent: 0;
   }
 }
-
-// helper classes for fonts
-// do not edit
-.font-primary {@include primary;}
-.font-primary-italic {@include primary-italic;}
-.font-secondary {@include secondary;}
-.font-secondary-heavy {@include secondary-heavy;}
-.font-tertiary {@include tertiary;}
-.font-tertiary-italic {@include tertiary-italic;}

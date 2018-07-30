@@ -1,4 +1,24 @@
-select {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0px;
+$form-element-height:          $space-lg;
+$form-element-border:          $border-base;
+
+
+input,
+select,
+button,
+.button,
+textarea {
+  width: 100%;
+  border: $form-element-border;
+}
+
+input,
+select,
+button,
+.button {
+  height: $form-element-height;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
 }

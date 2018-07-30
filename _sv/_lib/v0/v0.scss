@@ -1727,65 +1727,65 @@ You can make an overlay compatible with Bootstrap collapse by adding the `is-col
 
 //
 .b-all-sm, .b-a-sm {
-  border-all: $border-sm;
+  border-width: $border-width-sm;
 }
 
 .b-top-sm, .b-t-sm {
-  border-top: $border-sm;
+  border-top-width: $border-width-sm;
 }
 
 .b-right-sm, .b-r-sm {
-  border-right: $border-sm;
+  border-right-width: $border-width-sm;
 }
 
 .b-bottom-sm, .b-b-sm {
-  border-bottom: $border-sm;
+  border-bottom-width: $border-width-sm;
 }
 
 .b-left-sm, .b-l-sm {
-  border-left: $border-sm;
+  border-left-width: $border-width-sm;
 }
 
 //
 .b-all-md, .b-a-md {
-  border: $border-md;
+  border-width: $border-width-md;
 }
 
 .b-top-md, .b-t-md {
-  border-top: $border-md;
+  border-top-width: $border-width-md;
 }
 
 .b-right-md, .b-r-md {
-  border-right: $border-md;
+  border-right-width: $border-width-md;
 }
 
 .b-bottom-md, .b-b-md {
-  border-bottom: $border-md;
+  border-bottom-width: $border-width-md;
 }
 
 .b-left-md, .b-l-md {
-  border-left: $border-md;
+  border-left-width: $border-width-md;
 }
 
 //
 .b-all-lg, .b-a-lg {
-  border: $border-lg;
+  border-width: $border-width-lg;
 }
 
 .b-top-lg, .b-t-lg {
-  border-top: $border-lg;
+  border-top-width: $border-width-lg;
 }
 
 .b-right-lg, .b-r-lg {
-  border-right: $border-lg;
+  border-right-width: $border-width-lg;
 }
 
 .b-bottom-lg, .b-b-lg {
-  border-bottom: $border-lg;
+  border-bottom-width: $border-width-lg;
 }
 
 .b-left-lg, .b-l-lg {
-  border-left: $border-lg;
+  border-left-width: $border-width-lg;
 }
 
 // border colors
@@ -1795,10 +1795,6 @@ You can make an overlay compatible with Bootstrap collapse by adding the `is-col
 
 .b-color-brand {
   border-color: $color-brand !important;
-}
-
-.b-color-brand-secondary {
-  border-color: $color-brand-secondary !important;
 }
 
 .b-color-gray {
@@ -1832,10 +1828,6 @@ You can make an overlay compatible with Bootstrap collapse by adding the `is-col
 
 .u-color-brand {
   background-color: $color-brand;
-}
-
-.u-color-brand-secondary {
-  background-color: $color-brand-secondary;
 }
 
 .u-color-gray {

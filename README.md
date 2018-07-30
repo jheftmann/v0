@@ -31,9 +31,9 @@ v0 uses Bootstrap 4’s Layout and Utilities tools:
 ## Deprecated
 These are still supported but should be phased out in favor of Bootstrap helpers:
 
-- positioning – `u-relative`, etc.
-- display – `u-block`, etc.
-- spacing – `u-sm-pvlg`, etc.
+- positioning – `u-relative`, etc. [Bootstrap docs](https://getbootstrap.com/docs/4.0/utilities/position/)
+- display – `u-block`, etc.  [Bootstrap docs](https://getbootstrap.com/docs/4.0/utilities/display/)
+- spacing – `u-sm-pvlg`, etc. become `.px-6` [Bootstrap docs](https://getbootstrap.com/docs/4.0/utilities/spacing/)
 
 ## To do
 + [x] Update bootstrap
@@ -48,8 +48,8 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] `body {-moz-osx-font-smoothing: grayscale;}`
 + [x] `.sv-badge {display: none !important;}`
 + [x] image filepath
-+ [ ] update font path variable
-+ [ ] variablize set and reading text namespaces - `#{$t-set}`
++ [x] update font path variable
++ [x] variablize set and reading text namespaces - `#{$t-set}`
 + [x] move font smoothing
 + [x] add ::selection to defaults
 + [x] delete bootstrap 3
@@ -64,6 +64,6 @@ These are still supported but should be phased out in favor of Bootstrap helpers
 + [x] border utilities
 + [x] color reverse utilities
 + [x] background utilities
-+ [ ] add `.noprint` style
++ [x] add `.noprint` style
 + [ ] add version numbers
-+ [ ] streamline type setup
++ [x] streamline type setup
