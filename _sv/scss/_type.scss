@@ -177,7 +177,7 @@ h5 {
     font-size: $text-xs-sm;
 
     @include sm {
-      font-size: $text-xxl;
+      font-size: $text-sm;
     }
   }
 }
@@ -187,7 +187,7 @@ h6 {
     font-size: $text-xs-xxs;
 
     @include sm {
-      font-size: $text-xxl;
+      font-size: $text-xxs;
     }
   }
 }
@@ -448,6 +448,111 @@ hr {
 
   blockquote {
     font-size: $text-lg;
+  }
+}
+
+////////////////////////////////////////////
+// T-SET + T-READING - `.t-set.t-reading`
+.t-variable {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &.t-variable {
+      line-height: $text-line-sm;
+    }
+  }
+
+  h1 {
+    &.t-variable {
+      font-size: $text-xs-xxl;
+
+      @include sm {
+        font-size: $text-v-xl;
+      }
+    }
+  }
+
+  h2 {
+    &.t-variable {
+      font-size: $text-xs-xl;
+
+      @include sm {
+        font-size: $text-v-xl;
+      }
+    }
+  }
+
+  h3 {
+    &.t-variable {
+      font-size: $text-xs-lg;
+
+      @include sm {
+        font-size: $text-v-lg;
+      }
+    }
+  }
+
+  h4 {
+    &.t-variable {
+      font-size: $text-xs-md;
+
+      @include sm {
+        font-size: $text-v-md;
+      }
+    }
+  }
+
+  h5 {
+    &.t-variable {
+      font-size: $text-xs-sm;
+
+      @include sm {
+        font-size: $text-v-sm;
+      }
+    }
+  }
+
+  h6 {
+    &.t-variable {
+      font-size: $text-xs-xs;
+
+      @include sm {
+        font-size: $text-v-xs;
+      }
+    }
+  }
+
+  p,
+  li {
+    &.t-variable {
+      @extend .t-hyphenate;
+      font-size: $text-v-base;
+      letter-spacing: $text-letter-base;
+      line-height: $text-line-base;
+
+      > a {
+        border-bottom: 1px solid $color-base;
+
+        &:active,
+        &:target {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:visited {
+          border: 0;
+          text-decoration: line-through;
+          color: inherit;
+        }
+      }
+    }
   }
 }
 
