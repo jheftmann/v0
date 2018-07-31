@@ -40,7 +40,11 @@ h6, {
   color: $color-text-primary;
   letter-spacing: $text-letter-base;
   line-height: $text-line-base;
-  font-size: $text-lg;
+  font-size: $text-xs-lg;
+
+  @include sm {
+    font-size: $text-lg;
+  }
 }
 
 p,
@@ -48,10 +52,14 @@ li,
 span,
 blockquote,
 a {
-  color: $color-text-primary;
-  letter-spacing: $text-letter-md;
-  line-height: $text-line-md;
-  font-size: $text-sm;
+  letter-spacing: $text-letter-base;
+  line-height: $text-line-base;
+  font-size: $text-xs-base;
+  color: $color-base;
+
+  @include sm {
+    font-size: $text-base;
+  }
 }
 
 ul, ol {
@@ -65,11 +73,17 @@ ul, ol {
 }
 
 i, em {
-  //
+
+  b, strong {
+
+  }
 }
 
 b, strong {
   //
+  i, em {
+    
+  }
 }
 
 a {
