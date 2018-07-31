@@ -13,6 +13,14 @@
 
 //////////////////////
 // default type styles
+* {
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
 body {
   @include font-primary;
   color: $color-type-primary;
@@ -23,33 +31,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  font-weight: normal;
-  font-style: normal;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6, {
+  color: $color-text-primary;
   letter-spacing: $text-letter-base;
   line-height: $text-line-base;
   font-size: $text-lg;
-  margin: 0;
-  padding: 0;
-  text-transform: none;
 }
 
 p,
-li {
+li,
+span,
+blockquote,
+a {
+  color: $color-text-primary;
   letter-spacing: $text-letter-md;
   line-height: $text-line-md;
   font-size: $text-sm;
-  margin: 0;
-  padding: 0;
-  text-transform: none;
 }
 
 ul, ol {
@@ -62,7 +64,7 @@ ul, ol {
   }
 }
 
-i, b {
+i, em {
   //
 }
 
@@ -82,11 +84,6 @@ a {
     color: inherit;
     text-decoration: none;
   }
-}
-
-blockquote {
-  padding: 0;
-  margin: 0;
 }
 
 code,
@@ -452,7 +449,7 @@ hr {
 }
 
 ////////////////////////////////////////////
-// T-SET + T-READING - `.t-set.t-reading`
+// T-SET + T-READING + T-VARIABLE - `.t-set.t-reading.t-variable`
 .t-variable {
   h1,
   h2,
